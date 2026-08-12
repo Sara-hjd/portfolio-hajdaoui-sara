@@ -1,0 +1,71 @@
+/* =============================================================
+   accessibility.css
+   -----------------
+   Styles dédiés à l'accessibilité.
+   Intégrés proprement au design — ils ne dégradent pas l'esthétique.
+   ============================================================= */
+
+/* ---- Focus visible ----------------------------------------- */
+/* Remplace l'outline navigateur par quelque chose de propre et cohérent */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+/* Supprime le focus visible uniquement à la souris (pas au clavier) */
+:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ---- Navigation au clavier --------------------------------- */
+/* S'assure que tous les éléments interactifs sont atteignables */
+a,
+button,
+input,
+select,
+textarea,
+[tabindex]:not([tabindex='-1']) {
+  /* Le focus est géré par :focus-visible ci-dessus */
+}
+
+/* ---- Réduction des mouvements ------------------------------ */
+/* Respecte la préférence utilisateur prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Contraste élevé (Windows) ----------------------------- */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid ButtonText;
+  }
+}
+
+/* ---- Taille minimale des zones de clic --------------------- */
+/* WCAG 2.5.5 : cibles interactives minimum 44×44px */
+button,
+a[role='button'],
+[role='button'] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Exception pour les liens inline dans le texte */
+p a,
+li a {
+  min-height: unset;
+  min-width: unset;
+  display: inline;
+}

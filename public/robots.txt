@@ -1,0 +1,7 @@
+# Instruction aux robots d'indexation
+# Ce site est accessible par lien direct mais n'est pas destiné à être indexé.
+# Ces instructions seront respectées par les moteurs de recherche conformes (Google, Bing, etc.)
+# dans un délai de 1 à 14 jours après la publication.
+
+User-agent: *
+Disallow: /

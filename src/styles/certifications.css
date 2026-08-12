@@ -1,0 +1,198 @@
+/**
+ * certifications.css
+ * -----------------
+ * Styles pour la section Certifications.
+ */
+
+.certifications__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.certifications__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.certification-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.certification-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+.certification-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.certification-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: var(--border-radius-md);
+  flex-shrink: 0;
+}
+
+.certification-card__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.certification-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.certification-card__date {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.certification-card__issuer {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.certification-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.certification-card__description {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.certification-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.certification-card__skill {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.certification-card__skill--more {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-color: var(--color-primary);
+}
+
+.certification-card__skill--toggle {
+  background: var(--color-bg-alt);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: background-color var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast);
+}
+
+.certification-card__skill--toggle:hover {
+  background: var(--color-bg-surface-hover);
+  border-color: var(--color-border-hover);
+  color: var(--color-text-primary);
+}
+
+.certification-card__skill--toggle svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition-fast);
+}
+
+.certification-card__skill--toggle .rotate-180 {
+  transform: rotate(180deg);
+}
+
+.certification-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.certification-card__link:hover {
+  background: #1d4ed8;
+}
+
+.certification-card__link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.certification-card__file {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #059669;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.certification-card__file:hover {
+  background: #047857;
+}
+
+.certifications__empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .certifications__grid {
+    grid-template-columns: 1fr;
+  }
+}

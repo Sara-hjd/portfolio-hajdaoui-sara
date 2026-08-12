@@ -1,0 +1,188 @@
+/* =============================================================
+   theme.css
+   ---------
+   Tokens de design : dark mode et light mode.
+   Appliqué via data-theme="dark" ou data-theme="light" sur <html>.
+
+   PHILOSOPHIE :
+   - Palette bleu-gris désaturé, sobre, professionnelle
+   - L'accent est utilisé avec parcimonie — liens, hovers, highlights
+   - Pas de néon, pas de gradient criard, pas d'esthétique "IA"
+   - Le contenu prime sur la couleur
+   ============================================================= */
+
+/* ---- Dark mode (par défaut) -------------------------------- */
+:root,
+:root[data-theme='dark'] {
+
+  /* --- Backgrounds --- */
+  --bg-primary:       #0e1016;   /* fond principal — noir doux, pas pur */
+  --bg-secondary:     #13171e;   /* fond sections alternées */
+  --bg-surface:       #1a1f2a;   /* cartes, panels */
+  --bg-surface-hover: #212736;   /* survol d'une carte */
+  --bg-input:         #1a1f2a;   /* champs de formulaire */
+
+  /* --- Texte --- */
+  --text-primary:     #e2e5ed;   /* texte principal — blanc cassé chaud */
+  --text-secondary:   #8a94a6;   /* texte secondaire */
+  --text-muted:       #566070;   /* texte désactivé, hints */
+  --text-on-accent:   #ffffff;   /* texte sur fond accent */
+
+  /* --- Accent — bleu-gris, désaturé, sobre --- */
+  --accent:           #7a9abf;   /* utilisé avec parcimonie */
+  --accent-hover:     #9db8d6;
+  --accent-subtle:    rgba(122, 154, 191, 0.09);
+  --accent-border:    rgba(122, 154, 191, 0.25);
+
+  /* --- Bordures --- */
+  --border:           #222838;   /* bordure standard */
+  --border-hover:     #36415a;   /* bordure au survol */
+  --border-subtle:    #1c2130;   /* bordure très discrète */
+
+  /* --- États interactifs --- */
+  --interactive-hover-bg: rgba(255, 255, 255, 0.04);
+  --interactive-active-bg: rgba(255, 255, 255, 0.07);
+
+  /* --- Ombres --- */
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md:  0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg:  0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--border);
+
+  /* --- Focus (accessibilité) --- */
+  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent);
+
+  /* --- Statuts sémantiques (utilisés avec parcimonie) --- */
+  --status-success: #4a9e6e;
+  --status-warning: #b08a44;
+  --status-info:    #5a8ab8;
+
+  /* --- Overlay (modals, drawers) --- */
+  --overlay: rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Light mode -------------------------------------------- */
+:root[data-theme='light'] {
+
+  /* --- Backgrounds --- */
+  --bg-primary:       #f7f8fa;
+  --bg-secondary:     #eef0f4;
+  --bg-surface:       #ffffff;
+  --bg-surface-hover: #f3f5f9;
+  --bg-input:         #ffffff;
+
+  /* --- Texte --- */
+  --text-primary:     #1b1f2b;
+  --text-secondary:   #485166;
+  --text-muted:       #8a96a8;
+  --text-on-accent:   #ffffff;
+
+  /* --- Accent --- */
+  --accent:           #3a6ca3;
+  --accent-hover:     #2d5890;
+  --accent-subtle:    rgba(58, 108, 163, 0.08);
+  --accent-border:    rgba(58, 108, 163, 0.22);
+
+  /* --- Bordures --- */
+  --border:           #dde1ea;
+  --border-hover:     #b8c0ce;
+  --border-subtle:    #eaecf1;
+
+  /* --- États interactifs --- */
+  --interactive-hover-bg: rgba(0, 0, 0, 0.04);
+  --interactive-active-bg: rgba(0, 0, 0, 0.07);
+
+  /* --- Ombres --- */
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.07);
+  --shadow-md:  0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg:  0 8px 32px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05), 0 0 0 1px var(--border);
+
+  /* --- Focus (accessibilité) --- */
+  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--accent);
+
+  /* --- Statuts sémantiques --- */
+  --status-success: #2e7d52;
+  --status-warning: #9a6f20;
+  --status-info:    #2d5a8e;
+
+  /* --- Overlay --- */
+  --overlay: rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Tokens fixes (indépendants du thème) ------------------ */
+:root {
+
+  /* --- Spacing — échelle × 4px --- */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+
+  /* --- Typographie — échelle --- */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-md:   1.0625rem;  /* 17px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+
+  /* --- Line-heights --- */
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  /* --- Font weights --- */
+  --weight-normal:   400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* --- Border radius --- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* --- Transitions discrètes (vitesse, jamais de spec. visuelles) --- */
+  --transition-fast:  120ms ease;
+  --transition-base:  200ms ease;
+  --transition-slow:  300ms ease;
+  --transition-theme: 220ms ease; /* uniquement pour le changement de thème */
+
+  /* --- Layout --- */
+  --container-max:   1100px;
+  --container-pad:   clamp(1rem, 4vw, 2rem);
+  --section-pad:     clamp(3.5rem, 8vw, 6rem);
+  --navbar-height:   64px;
+
+  /* --- Breakpoints (référence documentaire — utilisés dans les media queries) ---
+     sm:  480px  — grand mobile
+     md:  768px  — tablette portrait
+     lg:  1024px — tablette paysage / petit laptop
+     xl:  1280px — desktop
+  */
+
+  /* --- Z-index --- */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-navbar:  100;
+  --z-modal:   200;
+  --z-toast:   300;
+  --z-skip:    9999;
+}

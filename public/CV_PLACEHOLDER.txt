@@ -1,0 +1,6 @@
+Ce fichier est un placeholder.
+Remplacer par le vrai fichier CV (PDF) lorsqu'il sera finalisé.
+Nom attendu : cv.pdf
+Emplacement : /public/cv.pdf
+
+Le bouton "Télécharger mon CV" dans le portfolio pointera vers ce fichier.
