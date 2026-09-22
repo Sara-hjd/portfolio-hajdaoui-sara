@@ -59,7 +59,8 @@
     "subtitle": "My professional journey",
     "current": "Current",
     "missions": "Missions",
-    "technologies": "Technologies"
+    "technologies": "Technologies",
+    "noExperience": "No experience to display at the moment."
   },
   "education": {
     "title": "Education",

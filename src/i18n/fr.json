@@ -59,7 +59,8 @@
     "subtitle": "Mon parcours professionnel",
     "current": "Présent",
     "missions": "Missions",
-    "technologies": "Technologies"
+    "technologies": "Technologies",
+    "noExperience": "Aucune expérience à afficher pour le moment."
   },
   "education": {
     "title": "Formation",
