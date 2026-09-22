@@ -23,7 +23,9 @@
     "bio1": "Mon parcours en informatique m'a progressivement amenée à explorer différents aspects du développement et des technologies numériques. Après une troisième année principalement orientée développement, durant laquelle j'ai eu l'occasion de réaliser plusieurs projets, j'ai découvert en quatrième année un autre aspect de l'informatique à travers l'Intelligence Artificielle et la Data.",
     "bio2": "Ce qui me plaît particulièrement dans ce domaine est sa diversité : comprendre un problème, poser les bonnes questions, rechercher différentes approches, expérimenter et construire une solution concrète. Je suis naturellement curieuse et j'aime apprendre de nouvelles technologies en comprenant d'abord leur fonctionnement, puis en les mettant en pratique.",
     "bio3": "Je me définis aujourd'hui comme un profil polyvalent et adaptable, avec un intérêt pour le développement, l'IA et la Data. J'apprécie également le travail en équipe, où les échanges permettent de confronter les idées et d'explorer différentes solutions.",
-    "bio4": "Mon objectif pour la suite est de passer progressivement de l'apprentissage académique à des problématiques professionnelles concrètes, à travers un projet de fin d'études qui me permettra à la fois d'apprendre, de contribuer et de mettre mes compétences en pratique."
+    "bio4": "Mon objectif pour la suite est de passer progressivement de l'apprentissage académique à des problématiques professionnelles concrètes, à travers un projet de fin d'études qui me permettra à la fois d'apprendre, de contribuer et de mettre mes compétences en pratique.",
+    "languages": "Langues",
+    "interests": "Centres d'intérêt professionnels"
   },
   "projects": {
     "title": "Mes Projets",
@@ -41,11 +43,15 @@
     "title": "Compétences",
     "subtitle": "Mes compétences techniques et outils",
     "categories": {
-      "frontend": "Frontend",
+      "programming": "Langages de programmation",
+      "web": "Développement Web",
       "backend": "Backend",
-      "ai": "IA & Machine Learning",
-      "tools": "Outils & DevOps",
-      "languages": "Langages"
+      "databases": "Bases de données",
+      "data": "Data / IA",
+      "llm": "LLM / GenAI",
+      "tools": "Outils",
+      "modeling": "Modélisation & Conception",
+      "softSkills": "Soft skills"
     }
   },
   "experience": {
@@ -57,11 +63,20 @@
   },
   "education": {
     "title": "Formation",
-    "subtitle": "Mon parcours académique"
+    "subtitle": "Mon parcours académique",
+    "coursesTitle": "Cours pertinents",
+    "honorsLabel": "Distinction :",
+    "noEducation": "Aucune formation à afficher pour le moment."
   },
   "certifications": {
     "title": "Certifications",
-    "subtitle": "Mes certifications et formations"
+    "subtitle": "Mes certifications et formations",
+    "viewLess": "Voir moins",
+    "verify": "Vérifier",
+    "verifyLabel": "Vérifier la certification",
+    "downloadPDF": "Certificat PDF",
+    "downloadLabel": "Télécharger le certificat",
+    "noCertifications": "Aucune certification à afficher pour le moment."
   },
   "contact": {
     "title": "Contact",

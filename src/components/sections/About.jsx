@@ -25,7 +25,7 @@ export default function About() {
 
           {(personal.languages && personal.languages.length > 0) && (
             <div className="about__languages">
-              <h3 className="about__subtitle">Langues</h3>
+              <h3 className="about__subtitle">{t('about.languages')}</h3>
               <ul className="about__languages-list">
                 {personal.languages.map((lang, index) => (
                   <li key={index} className="about__language-item">
@@ -39,7 +39,7 @@ export default function About() {
 
           {(personal.interests && personal.interests.length > 0) && (
             <div className="about__interests">
-              <h3 className="about__subtitle">Centres d'intérêt</h3>
+              <h3 className="about__subtitle">{t('about.interests')}</h3>
               <ul className="about__interests-list">
                 {personal.interests.map((interest, index) => (
                   <li key={index} className="about__interest-item">

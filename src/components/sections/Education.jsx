@@ -4,13 +4,16 @@
  * Section Formation avec timeline.
  */
 
+import { useTranslation } from 'react-i18next'
 import { education } from '../../data/education.js'
 
 export default function Education() {
+  const { t } = useTranslation()
+
   return (
     <section className="education section section--alt" id="education">
       <div className="container education__container">
-        <h2 className="section__title">Formation</h2>
+        <h2 className="section__title">{t('education.title')}</h2>
         
         <div className="education__timeline">
           {education.map((edu) => (
@@ -38,7 +41,7 @@ export default function Education() {
 
                 {edu.relevantCourses && edu.relevantCourses.length > 0 && (
                   <div className="education-item__courses">
-                    <h4 className="education-item__courses-title">Cours pertinents</h4>
+                    <h4 className="education-item__courses-title">{t('education.coursesTitle')}</h4>
                     <div className="education-item__courses-list">
                       {edu.relevantCourses.map((course, courseIndex) => (
                         <span key={courseIndex} className="education-item__course">
@@ -51,7 +54,7 @@ export default function Education() {
 
                 {edu.honors && (
                   <p className="education-item__honors">
-                    <span className="education-item__honors-label">Distinction :</span>
+                    <span className="education-item__honors-label">{t('education.honorsLabel')}</span>
                     {edu.honors}
                   </p>
                 )}
@@ -62,7 +65,7 @@ export default function Education() {
 
         {education.length === 0 && (
           <div className="education__empty">
-            <p>Aucune formation à afficher pour le moment.</p>
+            <p>{t('education.noEducation')}</p>
           </div>
         )}
       </div>
