@@ -254,12 +254,13 @@
 
 /* Language Selector */
 .language-selector {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
+  position: relative;
 }
 
-.lang-btn {
+.language-selector__button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
   padding: var(--space-1) var(--space-2);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
@@ -271,18 +272,75 @@
   transition: all var(--transition-fast);
 }
 
-.lang-btn:hover {
+.language-selector__button:hover {
   background-color: var(--interactive-hover-bg);
   color: var(--text-primary);
 }
 
-.lang-btn.active {
-  background-color: var(--accent);
-  color: var(--accent-contrast);
-  border-color: var(--accent);
+.language-selector__flag {
+  font-size: var(--text-sm);
 }
 
-.lang-btn:focus-visible {
+.language-selector__code {
+  text-transform: uppercase;
+}
+
+.language-selector__arrow {
+  font-size: 10px;
+  transition: transform var(--transition-fast);
+}
+
+.language-selector__arrow.open {
+  transform: rotate(180deg);
+}
+
+.language-selector__dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  right: 0;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  min-width: 140px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.language-selector__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  text-align: left;
+}
+
+.language-selector__option:hover {
+  background-color: var(--interactive-hover-bg);
+}
+
+.language-selector__option.active {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.language-selector__option-flag {
+  font-size: var(--text-base);
+}
+
+.language-selector__option-name {
+  font-weight: 500;
+}
+
+.language-selector__button:focus-visible,
+.language-selector__option:focus-visible {
   outline: none;
   box-shadow: var(--focus-ring);
 }

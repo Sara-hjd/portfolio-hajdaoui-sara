@@ -4,9 +4,12 @@
  * Section À propos avec informations personnelles et langues.
  */
 
+import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 
 export default function About() {
+  const { t } = useTranslation()
+
   return (
     <section className="about section section--alt" id="about">
       <div className="container about__container">
@@ -14,9 +17,10 @@ export default function About() {
         
         <div className="about__content">
           <div className="about__bio">
-            {personal.longBio.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            <p>{t('about.bio1')}</p>
+            <p>{t('about.bio2')}</p>
+            <p>{t('about.bio3')}</p>
+            <p>{t('about.bio4')}</p>
           </div>
 
           {(personal.languages && personal.languages.length > 0) && (

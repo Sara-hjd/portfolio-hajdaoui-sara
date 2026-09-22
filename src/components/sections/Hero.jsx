@@ -5,10 +5,13 @@
  */
 
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 import { FiArrowRight, FiMail, FiGithub } from 'react-icons/fi'
 
 export default function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className="hero section" id="hero">
       <div className="container hero__container">
@@ -22,7 +25,7 @@ export default function Hero() {
           <div className="hero__text">
             <h1 className="hero__title">{personal.name}</h1>
             <p className="hero__subtitle">{personal.title}</p>
-            <p className="hero__bio">{personal.shortBio}</p>
+            <p className="hero__bio">{t('hero.shortBio')}</p>
 
             <div className="hero__cta">
               <Link to="/" onClick={(e) => {
@@ -32,7 +35,7 @@ export default function Hero() {
                   projectsSection.scrollIntoView({ behavior: 'smooth' })
                 }
               }} className="btn btn--primary">
-                Voir mes projets
+                {t('hero.cta')}
                 <FiArrowRight aria-hidden="true" />
               </Link>
               <a
@@ -40,7 +43,7 @@ export default function Hero() {
                 className="btn btn--secondary"
               >
                 <FiMail aria-hidden="true" />
-                Me contacter
+                {t('contact.title')}
               </a>
               {personal.github && (
                 <a

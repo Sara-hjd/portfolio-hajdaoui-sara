@@ -14,13 +14,16 @@
     "name": "HAJDAOUI Sara",
     "title": "Computer Engineering Student",
     "subtitle": "AI, Machine Learning & Data",
-    "description": "Passionate about artificial intelligence and software development, I design innovative solutions to solve complex problems.",
+    "shortBio": "Computer engineering student specializing in Artificial Intelligence & Data at EMSI. I design and develop solutions combining Artificial Intelligence, Machine Learning, frontend and backend development, software development and data processing, with practical experience in scraping, AI pipelines and model integration. I am looking for a final year project for 2027 in AI, Machine Learning or Data.",
     "cta": "View my projects",
     "downloadCV": "Download CV"
   },
   "about": {
     "title": "About Me",
-    "description": "Computer engineering student focused on AI, Machine Learning, and Data Science. I am passionate about creating innovative solutions that combine software development and artificial intelligence."
+    "bio1": "My journey in computer science has progressively led me to explore different aspects of development and digital technologies. After a third year mainly focused on development, during which I had the opportunity to work on several projects, I discovered in my fourth year another aspect of computer science through Artificial Intelligence and Data.",
+    "bio2": "What particularly appeals to me in this field is its diversity: understanding a problem, asking the right questions, researching different approaches, experimenting and building a concrete solution. I am naturally curious and I enjoy learning new technologies by first understanding how they work, then putting them into practice.",
+    "bio3": "I define myself today as a versatile and adaptable profile, with an interest in development, AI and Data. I also appreciate teamwork, where exchanges allow us to confront ideas and explore different solutions.",
+    "bio4": "My goal for the future is to progressively move from academic learning to concrete professional problems, through a final year project that will allow me to both learn, contribute and put my skills into practice."
   },
   "projects": {
     "title": "My Projects",
@@ -63,6 +66,8 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Feel free to contact me",
+    "textPrimary": "I am currently looking for a final year project for 2027, with a particular interest in projects in Artificial Intelligence, Machine Learning and Data.",
+    "textSecondary": "My profile combines frontend and backend development, data processing, scraping, Machine Learning and AI solutions integration. I am open to opportunities allowing me to work on concrete problems and contribute to a project from start to finish.",
     "form": {
       "name": "Name",
       "email": "Email",

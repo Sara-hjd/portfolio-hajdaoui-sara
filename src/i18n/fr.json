@@ -14,13 +14,16 @@
     "name": "HAJDAOUI Sara",
     "title": "Étudiante ingénieure en informatique",
     "subtitle": "IA, Machine Learning & Data",
-    "description": "Passionnée par l'intelligence artificielle et le développement logiciel, je conçois des solutions innovantes pour résoudre des problèmes complexes.",
+    "shortBio": "Étudiante ingénieure en informatique, spécialisée en Intelligence Artificielle & Data à l'EMSI. Je conçois et développe des solutions combinant Intelligence Artificielle, Machine Learning, développement frontend et backend, développement logiciel et traitement des données, avec une expérience pratique en scraping, pipelines IA et intégration de modèles. Je recherche un projet de fin d'études pour 2027 dans les domaines de l'IA, du Machine Learning ou de la Data.",
     "cta": "Voir mes projets",
     "downloadCV": "Télécharger CV"
   },
   "about": {
     "title": "À propos de moi",
-    "description": "Étudiante ingénieure en informatique orientée vers l'IA, le Machine Learning et la Data Science. Je suis passionnée par la création de solutions innovantes qui combinent développement logiciel et intelligence artificielle."
+    "bio1": "Mon parcours en informatique m'a progressivement amenée à explorer différents aspects du développement et des technologies numériques. Après une troisième année principalement orientée développement, durant laquelle j'ai eu l'occasion de réaliser plusieurs projets, j'ai découvert en quatrième année un autre aspect de l'informatique à travers l'Intelligence Artificielle et la Data.",
+    "bio2": "Ce qui me plaît particulièrement dans ce domaine est sa diversité : comprendre un problème, poser les bonnes questions, rechercher différentes approches, expérimenter et construire une solution concrète. Je suis naturellement curieuse et j'aime apprendre de nouvelles technologies en comprenant d'abord leur fonctionnement, puis en les mettant en pratique.",
+    "bio3": "Je me définis aujourd'hui comme un profil polyvalent et adaptable, avec un intérêt pour le développement, l'IA et la Data. J'apprécie également le travail en équipe, où les échanges permettent de confronter les idées et d'explorer différentes solutions.",
+    "bio4": "Mon objectif pour la suite est de passer progressivement de l'apprentissage académique à des problématiques professionnelles concrètes, à travers un projet de fin d'études qui me permettra à la fois d'apprendre, de contribuer et de mettre mes compétences en pratique."
   },
   "projects": {
     "title": "Mes Projets",
@@ -48,7 +51,7 @@
   "experience": {
     "title": "Expérience Professionnelle",
     "subtitle": "Mon parcours professionnel",
-    "current": "Actuel",
+    "current": "Présent",
     "missions": "Missions",
     "technologies": "Technologies"
   },
@@ -63,6 +66,8 @@
   "contact": {
     "title": "Contact",
     "subtitle": "N'hésitez pas à me contacter",
+    "textPrimary": "Je recherche actuellement un projet de fin d'études pour 2027, avec un intérêt particulier pour les projets en Intelligence Artificielle, Machine Learning et Data.",
+    "textSecondary": "Mon profil combine développement frontend et backend, traitement des données, scraping, Machine Learning et intégration de solutions IA. Je suis ouverte aux opportunités permettant de travailler sur des problématiques concrètes et de contribuer à un projet de bout en bout.",
     "form": {
       "name": "Nom",
       "email": "Email",
