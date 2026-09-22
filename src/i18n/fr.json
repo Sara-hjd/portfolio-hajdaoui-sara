@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "education": "Formation",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "HAJDAOUI Sara",
+    "title": "Étudiante ingénieure en informatique",
+    "subtitle": "IA, Machine Learning & Data",
+    "description": "Passionnée par l'intelligence artificielle et le développement logiciel, je conçois des solutions innovantes pour résoudre des problèmes complexes.",
+    "cta": "Voir mes projets",
+    "downloadCV": "Télécharger CV"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Étudiante ingénieure en informatique orientée vers l'IA, le Machine Learning et la Data Science. Je suis passionnée par la création de solutions innovantes qui combinent développement logiciel et intelligence artificielle."
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations académiques et personnelles",
+    "viewProject": "Voir le projet",
+    "technologies": "Technologies",
+    "year": "Année",
+    "type": {
+      "personal": "Personnel",
+      "academic": "Académique",
+      "professional": "Professionnel"
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Mes compétences techniques et outils",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "ai": "IA & Machine Learning",
+      "tools": "Outils & DevOps",
+      "languages": "Langages"
+    }
+  },
+  "experience": {
+    "title": "Expérience Professionnelle",
+    "subtitle": "Mon parcours professionnel",
+    "current": "Actuel",
+    "missions": "Missions",
+    "technologies": "Technologies"
+  },
+  "education": {
+    "title": "Formation",
+    "subtitle": "Mon parcours académique"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "subtitle": "Mes certifications et formations"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "N'hésitez pas à me contacter",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer"
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "readMore": "En savoir plus"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I am",
+    "name": "HAJDAOUI Sara",
+    "title": "Computer Engineering Student",
+    "subtitle": "AI, Machine Learning & Data",
+    "description": "Passionate about artificial intelligence and software development, I design innovative solutions to solve complex problems.",
+    "cta": "View my projects",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Computer engineering student focused on AI, Machine Learning, and Data Science. I am passionate about creating innovative solutions that combine software development and artificial intelligence."
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Discover my academic and personal achievements",
+    "viewProject": "View project",
+    "technologies": "Technologies",
+    "year": "Year",
+    "type": {
+      "personal": "Personal",
+      "academic": "Academic",
+      "professional": "Professional"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "My technical skills and tools",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "ai": "AI & Machine Learning",
+      "tools": "Tools & DevOps",
+      "languages": "Languages"
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My professional journey",
+    "current": "Current",
+    "missions": "Missions",
+    "technologies": "Technologies"
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "My academic background"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "subtitle": "My certifications and training"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Feel free to contact me",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "readMore": "Read more"
+  }
+}

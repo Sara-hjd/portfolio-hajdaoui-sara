@@ -7,25 +7,28 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../../hooks/useTheme'
+import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 import { FiMenu, FiX, FiMoon, FiSun, FiGithub } from 'react-icons/fi'
+import LanguageSelector from '../ui/LanguageSelector.jsx'
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme()
+  const { t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const location = useLocation()
 
   const navItems = useMemo(() => [
-    { label: 'À propos', href: '#about' },
-    { label: 'Compétences', href: '#skills' },
-    { label: 'Projets', href: '#projects' },
-    { label: 'Expérience', href: '#experience' },
-    { label: 'Formation', href: '#education' },
-    { label: 'Certifications', href: '#certifications' },
-    { label: 'Contact', href: '#contact' },
-  ], [])
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.skills'), href: '#skills' },
+    { label: t('nav.projects'), href: '#projects' },
+    { label: t('nav.experience'), href: '#experience' },
+    { label: t('nav.education'), href: '#education' },
+    { label: t('nav.certifications'), href: '#certifications' },
+    { label: t('nav.contact'), href: '#contact' },
+  ], [t])
 
   // Fermer le menu au changement de route
   useEffect(() => {
@@ -115,8 +118,9 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* Actions droite (GitHub + Theme Toggle) */}
+        {/* Actions droite (GitHub + Theme Toggle + Language) */}
         <div className="navbar__actions">
+          <LanguageSelector />
           {personal.github && (
             <a
               href={personal.github}
