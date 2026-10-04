@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "ariaLabel": "Main navigation",
+    "homeLabel": "Back to home",
+    "githubLabel": "GitHub (new window)",
+    "themeToggleLabel": "Switch to {mode} mode",
+    "menuOpenLabel": "Close menu",
+    "menuCloseLabel": "Open menu"
+  },
+  "hero": {
+    "viewProjects": "View my projects",
+    "contactMe": "Contact me",
+    "github": "GitHub",
+    "seekingPFE": "Looking for final year project {year}",
+    "pfeNote": "{note}"
+  },
+  "about": {
+    "title": "About",
+    "languages": "Languages",
+    "interests": "Interests"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "empty": "No experience to display at the moment."
+  },
+  "projects": {
+    "title": "Projects",
+    "type": {
+      "academic": "Academic",
+      "professional": "Professional",
+      "personal": "Personal"
+    },
+    "viewProject": "View project",
+    "githubLabel": "GitHub (new window)",
+    "demoLabel": "Demo (new window)",
+    "empty": "No projects to display at the moment.",
+    "modal": {
+      "closeLabel": "Close",
+      "type": {
+        "academic": "Academic project",
+        "professional": "Professional project",
+        "personal": "Personal project"
+      },
+      "github": "GitHub",
+      "demo": "Demo",
+      "sections": {
+        "problem": "Problem",
+        "overview": "Overview",
+        "objective": "Objective",
+        "solution": "Solution",
+        "technologies": "Technologies",
+        "myRole": "My Role",
+        "architecture": "Architecture",
+        "methodology": "Methodology",
+        "pipelineIA": "AI Pipeline",
+        "scraping": "Scraping",
+        "semanticSearch": "Semantic Search & AI",
+        "backend": "Backend",
+        "frontend": "Frontend",
+        "features": "Features",
+        "implementation": "Implementation",
+        "results": "Results",
+        "challenges": "Challenges",
+        "improvements": "Improvements",
+        "gallery": "Gallery"
+      },
+      "imageAlt": "Image {number}",
+      "seeMore": "See more",
+      "seeLess": "See less"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "present": "Present",
+    "coursesTitle": "Relevant Courses",
+    "honorsLabel": "Distinction:",
+    "empty": "No education to display at the moment."
+  },
+  "certifications": {
+    "title": "Certifications",
+    "seeMoreSkills": "See more skills",
+    "seeLessSkills": "See less skills",
+    "verify": "Verify",
+    "verifyLabel": "Verify {title} certification (new window)",
+    "certificatePdf": "Certificate PDF",
+    "certificateLabel": "Download {title} certificate (new window)",
+    "empty": "No certifications to display at the moment."
+  },
+  "contact": {
+    "title": "Let's build something together.",
+    "textPrimary": "I am currently looking for a final year project for 2027, with a particular interest in projects in Artificial Intelligence, Machine Learning and Data.",
+    "textSecondary": "My profile combines frontend and backend development, data processing, scraping, Machine Learning and AI solutions integration. I am open to opportunities allowing me to work on concrete problems and contribute to a project from start to finish.",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "ai": "AI",
+      "machineLearning": "Machine Learning",
+      "data": "Data",
+      "scraping": "Scraping",
+      "pipelinesIA": "AI Pipelines"
+    },
+    "contactMe": "Contact me",
+    "github": "GitHub"
+  },
+  "footer": {
+    "tagline": "AI / Data",
+    "emailLabel": "Send email",
+    "githubLabel": "GitHub (new window)",
+    "copyright": "© {year} {name}"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "description": "This page does not exist or has been moved.",
+    "backToHome": "Back to home"
+  },
+  "languageSelector": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN"
+  }
+}

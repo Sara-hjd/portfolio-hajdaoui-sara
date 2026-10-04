@@ -4,15 +4,17 @@
  * Section Expérience avec timeline.
  */
 
+import { useTranslation } from 'react-i18next'
 import { experiences } from '../../data/experience.js'
 
 export default function Experience() {
+  const { t } = useTranslation()
   const completedExperiences = experiences.filter(exp => !exp.current || exp.missions.length > 0)
 
   return (
     <section className="experience section" id="experience">
       <div className="container experience__container">
-        <h2 className="section__title">Expérience</h2>
+        <h2 className="section__title">{t('experience.title')}</h2>
         
         <div className="experience__timeline">
           {completedExperiences.map((exp) => (
@@ -30,7 +32,7 @@ export default function Experience() {
                   <div className="experience-item__meta">
                     <span className="experience-item__location">{exp.location}</span>
                     <span className="experience-item__period">
-                      {exp.startDate} — {exp.current ? 'Présent' : exp.endDate}
+                      {exp.startDate} — {exp.current ? t('experience.present') : exp.endDate}
                     </span>
                   </div>
                 </div>
@@ -61,7 +63,7 @@ export default function Experience() {
 
         {completedExperiences.length === 0 && (
           <div className="experience__empty">
-            <p>Aucune expérience à afficher pour le moment.</p>
+            <p>{t('experience.empty')}</p>
           </div>
         )}
       </div>

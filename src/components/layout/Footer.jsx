@@ -4,10 +4,12 @@
  * Footer minimal avec informations essentielles.
  */
 
+import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 import { FiMail, FiGithub } from 'react-icons/fi'
 
 export default function Footer() {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -16,7 +18,7 @@ export default function Footer() {
         <div className="footer__content">
           <div className="footer__identity">
             <p className="footer__name">{personal.name}</p>
-            <p className="footer__tagline">IA / Data</p>
+            <p className="footer__tagline">{t('footer.tagline')}</p>
           </div>
 
           <div className="footer__links">
@@ -24,7 +26,7 @@ export default function Footer() {
               <a
                 href={`mailto:${personal.email}`}
                 className="footer__link"
-                aria-label="Envoyer un email"
+                aria-label={t('footer.emailLabel')}
               >
                 <FiMail aria-hidden="true" />
               </a>
@@ -35,7 +37,7 @@ export default function Footer() {
                 className="footer__link"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub (nouvelle fenêtre)"
+                aria-label={t('footer.githubLabel')}
               >
                 <FiGithub aria-hidden="true" />
               </a>
@@ -44,7 +46,7 @@ export default function Footer() {
         </div>
 
         <p className="footer__copyright">
-          © {currentYear} {personal.name}
+          {t('footer.copyright', { year: currentYear, name: personal.name })}
         </p>
       </div>
     </footer>

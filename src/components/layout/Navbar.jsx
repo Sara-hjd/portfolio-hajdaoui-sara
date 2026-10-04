@@ -6,26 +6,28 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useTheme } from '../../hooks/useTheme'
 import { personal } from '../../data/personal.js'
 import { FiMenu, FiX, FiMoon, FiSun, FiGithub } from 'react-icons/fi'
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme()
+  const { i18n, t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const location = useLocation()
 
   const navItems = useMemo(() => [
-    { label: 'À propos', href: '#about' },
-    { label: 'Compétences', href: '#skills' },
-    { label: 'Projets', href: '#projects' },
-    { label: 'Expérience', href: '#experience' },
-    { label: 'Formation', href: '#education' },
-    { label: 'Certifications', href: '#certifications' },
-    { label: 'Contact', href: '#contact' },
-  ], [])
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.skills'), href: '#skills' },
+    { label: t('nav.projects'), href: '#projects' },
+    { label: t('nav.experience'), href: '#experience' },
+    { label: t('nav.education'), href: '#education' },
+    { label: t('nav.certifications'), href: '#certifications' },
+    { label: t('nav.contact'), href: '#contact' },
+  ], [t])
 
   // Fermer le menu au changement de route
   useEffect(() => {
@@ -85,14 +87,18 @@ export default function Navbar() {
     }
   }
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+  }
+
   return (
     <header
       className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}
       role="banner"
     >
-      <nav className="navbar__container container" role="navigation" aria-label="Navigation principale">
+      <nav className="navbar__container container" role="navigation" aria-label={t('nav.ariaLabel')}>
         {/* Logo / Nom */}
-        <Link to="/" className="navbar__logo" aria-label="Retour à l'accueil">
+        <Link to="/" className="navbar__logo" aria-label={t('nav.homeLabel')}>
           <span className="navbar__name">{personal.name}</span>
         </Link>
 
@@ -115,15 +121,34 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* Actions droite (GitHub + Theme Toggle) */}
+        {/* Actions droite (GitHub + Language + Theme Toggle) */}
         <div className="navbar__actions">
+          {/* Language Selector */}
+          <div className="navbar__language-selector">
+            <button
+              className={`navbar__lang-btn ${i18n.language === 'fr' ? 'navbar__lang-btn--active' : ''}`}
+              onClick={() => changeLanguage('fr')}
+              aria-label="Français"
+            >
+              {t('languageSelector.fr')}
+            </button>
+            <span className="navbar__lang-separator">|</span>
+            <button
+              className={`navbar__lang-btn ${i18n.language === 'en' ? 'navbar__lang-btn--active' : ''}`}
+              onClick={() => changeLanguage('en')}
+              aria-label="English"
+            >
+              {t('languageSelector.en')}
+            </button>
+          </div>
+
           {personal.github && (
             <a
               href={personal.github}
               className="navbar__github-btn"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub (nouvelle fenêtre)"
+              aria-label={t('nav.githubLabel')}
             >
               <FiGithub aria-hidden="true" />
               <span>GitHub</span>
@@ -132,7 +157,7 @@ export default function Navbar() {
           <button
             className="navbar__icon-btn navbar__theme-toggle"
             onClick={toggleTheme}
-            aria-label={`Basculer vers le mode ${theme === 'dark' ? 'clair' : 'sombre'}`}
+            aria-label={t('nav.themeToggleLabel', { mode: theme === 'dark' ? 'light' : 'dark' })}
           >
             {theme === 'dark' ? (
               <FiSun aria-hidden="true" />
@@ -147,7 +172,7 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
-            aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+            aria-label={isMenuOpen ? t('nav.menuOpenLabel') : t('nav.menuCloseLabel')}
           >
             {isMenuOpen ? (
               <FiX aria-hidden="true" />

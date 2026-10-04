@@ -5,10 +5,12 @@
  */
 
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { getSortedCertifications } from '../../data/certifications.js'
 import { FiExternalLink, FiAward, FiChevronDown } from 'react-icons/fi'
 
 export default function Certifications() {
+  const { t } = useTranslation()
   const certifications = getSortedCertifications()
   const [expandedSkills, setExpandedSkills] = useState({})
 
@@ -22,7 +24,7 @@ export default function Certifications() {
   return (
     <section className="certifications section" id="certifications">
       <div className="container certifications__container">
-        <h2 className="section__title">Certifications</h2>
+        <h2 className="section__title">{t('certifications.title')}</h2>
         
         {certifications.length > 0 ? (
           <div className="certifications__grid">
@@ -61,12 +63,12 @@ export default function Certifications() {
                         <button
                           className="certification-card__skill certification-card__skill--toggle"
                           onClick={() => toggleSkills(cert.id)}
-                          aria-label={isExpanded ? 'Voir moins de compétences' : 'Voir plus de compétences'}
+                          aria-label={isExpanded ? t('certifications.seeLessSkills') : t('certifications.seeMoreSkills')}
                         >
                           {isExpanded ? (
                             <>
                               <FiChevronDown aria-hidden="true" className="rotate-180" />
-                              Voir moins
+                              {t('projects.modal.seeLess')}
                             </>
                           ) : (
                             <>
@@ -85,9 +87,9 @@ export default function Certifications() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="certification-card__link"
-                      aria-label={`Vérifier la certification ${cert.title} (nouvelle fenêtre)`}
+                      aria-label={t('certifications.verifyLabel', { title: cert.title })}
                     >
-                      <span>Vérifier</span>
+                      <span>{t('certifications.verify')}</span>
                       <FiExternalLink aria-hidden="true" />
                     </a>
                   )}
@@ -98,9 +100,9 @@ export default function Certifications() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="certification-card__file"
-                      aria-label={`Télécharger le certificat ${cert.title} (nouvelle fenêtre)`}
+                      aria-label={t('certifications.certificateLabel', { title: cert.title })}
                     >
-                      <span>Certificat PDF</span>
+                      <span>{t('certifications.certificatePdf')}</span>
                     </a>
                   )}
                 </article>
@@ -109,7 +111,7 @@ export default function Certifications() {
           </div>
         ) : (
           <div className="certifications__empty">
-            <p>Aucune certification à afficher pour le moment.</p>
+            <p>{t('certifications.empty')}</p>
           </div>
         )}
       </div>

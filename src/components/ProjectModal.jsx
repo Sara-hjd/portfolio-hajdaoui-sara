@@ -4,15 +4,17 @@
  * Modal pour afficher les détails d'un projet sur la page d'accueil.
  */
 
+import { useTranslation } from 'react-i18next'
 import { FiX, FiGithub, FiExternalLink } from 'react-icons/fi'
 
 export default function ProjectModal({ project, onClose }) {
+  const { t } = useTranslation()
   if (!project) return null
 
   return (
     <div className="project-modal-overlay" onClick={onClose}>
       <div className="project-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="project-modal__close" onClick={onClose} aria-label="Fermer">
+        <button className="project-modal__close" onClick={onClose} aria-label={t('projects.modal.closeLabel')}>
           <FiX aria-hidden="true" />
         </button>
 
@@ -21,8 +23,8 @@ export default function ProjectModal({ project, onClose }) {
           <header className="project-modal__header">
             <div className="project-modal__meta">
               <span className="project-modal__type">
-                {project.type === 'academic' ? 'Projet académique' : 
-                 project.type === 'professional' ? 'Projet professionnel' : 'Projet personnel'}
+                {project.type === 'academic' ? t('projects.modal.type.academic') : 
+                 project.type === 'professional' ? t('projects.modal.type.professional') : t('projects.modal.type.personal')}
               </span>
               <span className="project-modal__year">{project.year}</span>
             </div>
@@ -55,7 +57,7 @@ export default function ProjectModal({ project, onClose }) {
                   rel="noopener noreferrer"
                 >
                   <FiGithub aria-hidden="true" />
-                  GitHub
+                  {t('projects.modal.github')}
                 </a>
               )}
               {project.demoUrl && (
@@ -66,7 +68,7 @@ export default function ProjectModal({ project, onClose }) {
                   rel="noopener noreferrer"
                 >
                   <FiExternalLink aria-hidden="true" />
-                  Démo
+                  {t('projects.modal.demo')}
                 </a>
               )}
             </div>
@@ -76,35 +78,35 @@ export default function ProjectModal({ project, onClose }) {
           <div className="project-modal__body">
             {project.show.problem && project.problem && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Problème</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.problem')}</h3>
                 <p className="project-modal__text">{project.problem}</p>
               </section>
             )}
 
             {project.show.overview && project.overview && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Présentation</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.overview')}</h3>
                 <p className="project-modal__text">{project.overview}</p>
               </section>
             )}
 
             {project.show.objective && project.objective && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Objectif</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.objective')}</h3>
                 <p className="project-modal__text">{project.objective}</p>
               </section>
             )}
 
             {project.show.solution && project.solution && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Solution</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.solution')}</h3>
                 <p className="project-modal__text">{project.solution}</p>
               </section>
             )}
 
             {project.show.technologies && project.technologies && project.technologies.length > 0 && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Technologies</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.technologies')}</h3>
                 <div className="project-modal__tech-list">
                   {project.technologies.map((tech, index) => (
                     <span key={index} className="project-modal__tech-item">
@@ -117,14 +119,14 @@ export default function ProjectModal({ project, onClose }) {
 
             {project.show.myRole && project.myRole && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Mon Rôle</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.myRole')}</h3>
                 <p className="project-modal__text">{project.myRole}</p>
               </section>
             )}
 
             {project.show.architecture && project.architecture && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Architecture</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.architecture')}</h3>
                 <p className="project-modal__text">{project.architecture}</p>
                 {project.architectureDiagram && (
                   <div className="project-modal__diagram">
@@ -140,14 +142,14 @@ export default function ProjectModal({ project, onClose }) {
 
             {project.show.methodology && project.methodology && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Méthodologie</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.methodology')}</h3>
                 <p className="project-modal__text">{project.methodology}</p>
               </section>
             )}
 
             {project.show.pipelineIA && project.pipelineIA && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Pipeline IA</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.pipelineIA')}</h3>
                 <p className="project-modal__text">{project.pipelineIA}</p>
                 {project.pipelineDiagram && (
                   <div className="project-modal__diagram">
@@ -163,70 +165,70 @@ export default function ProjectModal({ project, onClose }) {
 
             {project.show.scraping && project.scraping && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Scraping</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.scraping')}</h3>
                 <p className="project-modal__text">{project.scraping}</p>
               </section>
             )}
 
             {project.show.semanticSearch && project.semanticSearch && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Recherche Sémantique & IA</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.semanticSearch')}</h3>
                 <p className="project-modal__text">{project.semanticSearch}</p>
               </section>
             )}
 
             {project.show.backend && project.backend && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Backend</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.backend')}</h3>
                 <p className="project-modal__text">{project.backend}</p>
               </section>
             )}
 
             {project.show.frontend && project.frontend && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Frontend</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.frontend')}</h3>
                 <p className="project-modal__text">{project.frontend}</p>
               </section>
             )}
 
             {project.show.features && project.features && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Fonctionnalités</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.features')}</h3>
                 <p className="project-modal__text">{project.features}</p>
               </section>
             )}
 
             {project.show.implementation && project.implementation && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Implémentation</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.implementation')}</h3>
                 <p className="project-modal__text">{project.implementation}</p>
               </section>
             )}
 
             {project.show.results && project.results && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Résultats</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.results')}</h3>
                 <p className="project-modal__text">{project.results}</p>
               </section>
             )}
 
             {project.show.challenges && project.challenges && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Défis</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.challenges')}</h3>
                 <p className="project-modal__text">{project.challenges}</p>
               </section>
             )}
 
             {project.show.improvements && project.improvements && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Améliorations</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.improvements')}</h3>
                 <p className="project-modal__text">{project.improvements}</p>
               </section>
             )}
 
             {project.show.images && project.images && project.images.length > 0 && (
               <section className="project-modal__section">
-                <h3 className="project-modal__section-title">Galerie</h3>
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.gallery')}</h3>
                 <div className="project-modal__gallery">
                   {project.images.map((image, index) => (
                     <div key={index} className="project-modal__gallery-item">

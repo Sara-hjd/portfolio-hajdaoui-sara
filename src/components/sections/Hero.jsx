@@ -5,10 +5,13 @@
  */
 
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 import { FiArrowRight, FiMail, FiGithub } from 'react-icons/fi'
 
 export default function Hero() {
+  const { t } = useTranslation()
+
   return (
     <section className="hero section" id="hero">
       <div className="container hero__container">
@@ -32,7 +35,7 @@ export default function Hero() {
                   projectsSection.scrollIntoView({ behavior: 'smooth' })
                 }
               }} className="btn btn--primary">
-                Voir mes projets
+                {t('hero.viewProjects')}
                 <FiArrowRight aria-hidden="true" />
               </Link>
               <a
@@ -40,7 +43,7 @@ export default function Hero() {
                 className="btn btn--secondary"
               >
                 <FiMail aria-hidden="true" />
-                Me contacter
+                {t('hero.contactMe')}
               </a>
               {personal.github && (
                 <a
@@ -50,7 +53,7 @@ export default function Hero() {
                   rel="noopener noreferrer"
                 >
                   <FiGithub aria-hidden="true" />
-                  GitHub
+                  {t('hero.github')}
                 </a>
               )}
             </div>
@@ -58,9 +61,9 @@ export default function Hero() {
             {personal.seekingPFE && (
               <div className="hero__status">
                 <span className="hero__status-badge">
-                  Recherche PFE {personal.pfeYear}
+                  {t('hero.seekingPFE', { year: personal.pfeYear })}
                 </span>
-                <span className="hero__status-text">{personal.pfeNote}</span>
+                <span className="hero__status-text">{t('hero.pfeNote', { note: personal.pfeNote })}</span>
               </div>
             )}
           </div>

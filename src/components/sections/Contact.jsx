@@ -4,38 +4,41 @@
  * Section Contact finale du portfolio.
  */
 
+import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 import { FiMail, FiGithub } from 'react-icons/fi'
 
 export default function Contact() {
+  const { t } = useTranslation()
+
   return (
     <section className="contact section" id="contact">
       <div className="container contact__container">
-        <h2 className="contact__title">Construisons quelque chose ensemble.</h2>
+        <h2 className="contact__title">{t('contact.title')}</h2>
 
         <div className="contact__content">
           <p className="contact__text-primary">
-            Je recherche actuellement un projet de fin d'études pour 2027, avec un intérêt particulier pour les projets en Intelligence Artificielle, Machine Learning et Data.
+            {t('contact.textPrimary')}
           </p>
 
           <p className="contact__text-secondary">
-            Mon profil combine développement frontend et backend, traitement des données, scraping, Machine Learning et intégration de solutions IA. Je suis ouverte aux opportunités permettant de travailler sur des problématiques concrètes et de contribuer à un projet de bout en bout.
+            {t('contact.textSecondary')}
           </p>
 
           <div className="contact__skills">
-            <span className="contact__skill">Frontend</span>
+            <span className="contact__skill">{t('contact.skills.frontend')}</span>
             <span className="contact__skill-separator">•</span>
-            <span className="contact__skill">Backend</span>
+            <span className="contact__skill">{t('contact.skills.backend')}</span>
             <span className="contact__skill-separator">•</span>
-            <span className="contact__skill">IA</span>
+            <span className="contact__skill">{t('contact.skills.ai')}</span>
             <span className="contact__skill-separator">•</span>
-            <span className="contact__skill">Machine Learning</span>
+            <span className="contact__skill">{t('contact.skills.machineLearning')}</span>
             <span className="contact__skill-separator">•</span>
-            <span className="contact__skill">Data</span>
+            <span className="contact__skill">{t('contact.skills.data')}</span>
             <span className="contact__skill-separator">•</span>
-            <span className="contact__skill">Scraping</span>
+            <span className="contact__skill">{t('contact.skills.scraping')}</span>
             <span className="contact__skill-separator">•</span>
-            <span className="contact__skill">Pipelines IA</span>
+            <span className="contact__skill">{t('contact.skills.pipelinesIA')}</span>
           </div>
 
           <div className="contact__links">
@@ -44,7 +47,7 @@ export default function Contact() {
               className="contact__link contact__link--primary"
             >
               <FiMail aria-hidden="true" />
-              <span>Me contacter</span>
+              <span>{t('contact.contactMe')}</span>
             </a>
 
             {personal.github && (
@@ -55,7 +58,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
               >
                 <FiGithub aria-hidden="true" />
-                <span>GitHub</span>
+                <span>{t('contact.github')}</span>
               </a>
             )}
           </div>

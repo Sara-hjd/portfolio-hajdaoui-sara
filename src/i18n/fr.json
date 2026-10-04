@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "education": "Formation",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "ariaLabel": "Navigation principale",
+    "homeLabel": "Retour à l'accueil",
+    "githubLabel": "GitHub (nouvelle fenêtre)",
+    "themeToggleLabel": "Basculer vers le mode {mode}",
+    "menuOpenLabel": "Fermer le menu",
+    "menuCloseLabel": "Ouvrir le menu"
+  },
+  "hero": {
+    "viewProjects": "Voir mes projets",
+    "contactMe": "Me contacter",
+    "github": "GitHub",
+    "seekingPFE": "Recherche PFE {year}",
+    "pfeNote": "{note}"
+  },
+  "about": {
+    "title": "À propos",
+    "languages": "Langues",
+    "interests": "Centres d'intérêt"
+  },
+  "skills": {
+    "title": "Compétences"
+  },
+  "experience": {
+    "title": "Expérience",
+    "present": "Présent",
+    "empty": "Aucune expérience à afficher pour le moment."
+  },
+  "projects": {
+    "title": "Projets",
+    "type": {
+      "academic": "Académique",
+      "professional": "Professionnel",
+      "personal": "Personnel"
+    },
+    "viewProject": "Voir le projet",
+    "githubLabel": "GitHub (nouvelle fenêtre)",
+    "demoLabel": "Démo (nouvelle fenêtre)",
+    "empty": "Aucun projet à afficher pour le moment.",
+    "modal": {
+      "closeLabel": "Fermer",
+      "type": {
+        "academic": "Projet académique",
+        "professional": "Projet professionnel",
+        "personal": "Projet personnel"
+      },
+      "github": "GitHub",
+      "demo": "Démo",
+      "sections": {
+        "problem": "Problème",
+        "overview": "Présentation",
+        "objective": "Objectif",
+        "solution": "Solution",
+        "technologies": "Technologies",
+        "myRole": "Mon Rôle",
+        "architecture": "Architecture",
+        "methodology": "Méthodologie",
+        "pipelineIA": "Pipeline IA",
+        "scraping": "Scraping",
+        "semanticSearch": "Recherche Sémantique & IA",
+        "backend": "Backend",
+        "frontend": "Frontend",
+        "features": "Fonctionnalités",
+        "implementation": "Implémentation",
+        "results": "Résultats",
+        "challenges": "Défis",
+        "improvements": "Améliorations",
+        "gallery": "Galerie"
+      },
+      "imageAlt": "Image {number}",
+      "seeMore": "Voir plus",
+      "seeLess": "Voir moins"
+    }
+  },
+  "education": {
+    "title": "Formation",
+    "present": "Présent",
+    "coursesTitle": "Cours pertinents",
+    "honorsLabel": "Distinction :",
+    "empty": "Aucune formation à afficher pour le moment."
+  },
+  "certifications": {
+    "title": "Certifications",
+    "seeMoreSkills": "Voir plus de compétences",
+    "seeLessSkills": "Voir moins de compétences",
+    "verify": "Vérifier",
+    "verifyLabel": "Vérifier la certification {title} (nouvelle fenêtre)",
+    "certificatePdf": "Certificat PDF",
+    "certificateLabel": "Télécharger le certificat {title} (nouvelle fenêtre)",
+    "empty": "Aucune certification à afficher pour le moment."
+  },
+  "contact": {
+    "title": "Construisons quelque chose ensemble.",
+    "textPrimary": "Je recherche actuellement un projet de fin d'études pour 2027, avec un intérêt particulier pour les projets en Intelligence Artificielle, Machine Learning et Data.",
+    "textSecondary": "Mon profil combine développement frontend et backend, traitement des données, scraping, Machine Learning et intégration de solutions IA. Je suis ouverte aux opportunités permettant de travailler sur des problématiques concrètes et de contribuer à un projet de bout en bout.",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "ai": "IA",
+      "machineLearning": "Machine Learning",
+      "data": "Data",
+      "scraping": "Scraping",
+      "pipelinesIA": "Pipelines IA"
+    },
+    "contactMe": "Me contacter",
+    "github": "GitHub"
+  },
+  "footer": {
+    "tagline": "IA / Data",
+    "emailLabel": "Envoyer un email",
+    "githubLabel": "GitHub (nouvelle fenêtre)",
+    "copyright": "© {year} {name}"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page introuvable",
+    "description": "Cette page n'existe pas ou a été déplacée.",
+    "backToHome": "Retour à l'accueil"
+  },
+  "languageSelector": {
+    "label": "Langue",
+    "fr": "FR",
+    "en": "EN"
+  }
+}
