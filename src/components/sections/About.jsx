@@ -17,7 +17,7 @@ export default function About() {
         
         <div className="about__content">
           <div className="about__bio">
-            {personal.longBio.map((paragraph, index) => (
+            {t('about.bio', { returnObjects: true }).map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>

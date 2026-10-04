@@ -24,15 +24,89 @@
   "about": {
     "title": "À propos",
     "languages": "Langues",
-    "interests": "Centres d'intérêt"
+    "interests": "Centres d'intérêt",
+    "bio": [
+      "Mon parcours en informatique m'a progressivement amenée à explorer différents aspects du développement et des technologies numériques. Après une troisième année principalement orientée développement, durant laquelle j'ai eu l'occasion de réaliser plusieurs projets, j'ai découvert en quatrième année un autre aspect de l'informatique à travers l'Intelligence Artificielle et la Data.",
+      "Ce qui me plaît particulièrement dans ce domaine est sa diversité : comprendre un problème, poser les bonnes questions, rechercher différentes approches, expérimenter et construire une solution concrète. Je suis naturellement curieuse et j'aime apprendre de nouvelles technologies en comprenant d'abord leur fonctionnement, puis en les mettant en pratique.",
+      "Je me définis aujourd'hui comme un profil polyvalent et adaptable, avec un intérêt pour le développement, l'IA et la Data. J'apprécie également le travail en équipe, où les échanges permettent de confronter les idées et d'explorer différentes solutions.",
+      "Mon objectif pour la suite est de passer progressivement de l'apprentissage académique à des problématiques professionnelles concrètes, à travers un projet de fin d'études qui me permettra à la fois d'apprendre, de contribuer et de mettre mes compétences en pratique."
+    ]
   },
   "skills": {
-    "title": "Compétences"
+    "title": "Compétences",
+    "categories": {
+      "programming": "Langages de programmation",
+      "web": "Développement Web",
+      "backend": "Backend",
+      "databases": "Bases de données",
+      "data": "Data / IA",
+      "llm": "LLM / GenAI",
+      "tools": "Outils",
+      "modeling": "Modélisation & Conception",
+      "softSkills": "Soft skills"
+    }
   },
   "experience": {
     "title": "Expérience",
     "present": "Présent",
-    "empty": "Aucune expérience à afficher pour le moment."
+    "empty": "Aucune expérience à afficher pour le moment.",
+    "sanlam": {
+      "title": "Stage — Intelligence Artificielle",
+      "company": "Sanlam",
+      "shortDescription": "Stage voila en Intelligence Artificielle. Projet réalisé en équipe, avec encadrement professionnel.",
+      "missions": [
+        "Classification automatique de documents (ResNet18, Qwen, Python, PyTorch, OCR)",
+        "Détection et analyse de dommages (Qwen, OCR, Python, traitement de documents/images)",
+        "Développement de scripts Python",
+        "Travail sur les pipelines IA",
+        "Collecte et préparation de données",
+        "Scraping",
+        "Traitement de documents/images",
+        "Intégration de différents composants techniques",
+        "Documentation technique"
+      ]
+    },
+    "jobgate": {
+      "title": "Stagiaire - Développement Web",
+      "company": "JOBGATE / UM6P StartGate",
+      "location": "Benguerir, Maroc",
+      "shortDescription": "Stage pratique sur une plateforme web d'enregistrement et de gestion de vidéos.",
+      "missions": [
+        "Analyse des besoins et modélisation de la solution",
+        "Développement frontend avec React.js",
+        "Développement backend avec Django REST",
+        "Implémentation d'un module d'édition vidéo avec FFmpeg",
+        "Gestion des vidéos et des métadonnées",
+        "Conception de l'architecture de la base de données",
+        "Travail en équipe agile"
+      ]
+    },
+    "cbi": {
+      "title": "Stagiaire - Observation",
+      "company": "CBI",
+      "location": "Casablanca, Maroc",
+      "shortDescription": "Stage d'observation dans une entreprise informatique.",
+      "missions": [
+        "Découverte des processus de développement logiciel",
+        "Apprentissage des outils et méthodes Utilisés",
+        "Participation à un projet pratique",
+        "Mise à jour d'un site intranet (HTML/CSS)",
+        "Initiation à l'administration système",
+        "Travail en équipe IT"
+      ]
+    },
+    "intersig": {
+      "title": "Stagiaire - Observation",
+      "company": "INTERSIG",
+      "location": "Casablanca, Maroc",
+      "shortDescription": "Stage d'observation dans une entreprise industrielle.",
+      "missions": [
+        "Découverte des processus de fabrication",
+        "Compréhension de l'organisation des départements",
+        "Développement d'un outil Excel/VBA de suivi de production",
+        "Gestion de données techniques"
+      ]
+    }
   },
   "projects": {
     "title": "Projets",
@@ -85,7 +159,25 @@
     "present": "Présent",
     "coursesTitle": "Cours pertinents",
     "honorsLabel": "Distinction :",
-    "empty": "Aucune formation à afficher pour le moment."
+    "empty": "Aucune formation à afficher pour le moment.",
+    "emsi": {
+      "degree": "Cycle d'ingénierie en informatique",
+      "field": "Intelligence Artificielle & Data",
+      "institution": "École Marocaine des Sciences de l'Ingénieur (EMSI)",
+      "description": "Cycle d'ingénierie en informatique, spécialité Intelligence Artificielle & Data."
+    },
+    "emsiPrep": {
+      "degree": "Année préparatoire",
+      "field": "Pôle Ingénierie — option développement informatique et industriel",
+      "institution": "École Marocaine des Sciences de l'Ingénieur (EMSI)",
+      "description": "Année préparatoire, Pôle Ingénierie, option développement informatique et industriel."
+    },
+    "baccalaureat": {
+      "degree": "Baccalauréat scientifique",
+      "field": "Sciences physiques",
+      "institution": "Groupe Scolaire Berrada",
+      "description": "Baccalauréat scientifique option Sciences physiques."
+    }
   },
   "certifications": {
     "title": "Certifications",
@@ -95,7 +187,42 @@
     "verifyLabel": "Vérifier la certification {title} (nouvelle fenêtre)",
     "certificatePdf": "Certificat PDF",
     "certificateLabel": "Télécharger le certificat {title} (nouvelle fenêtre)",
-    "empty": "Aucune certification à afficher pour le moment."
+    "empty": "Aucune certification à afficher pour le moment.",
+    "googleAgile": {
+      "title": "Agile Project Management",
+      "issuer": "Google",
+      "description": "Formation sur l'approche Agile de gestion de projet, incluant les valeurs et principes Agile, les piliers de Scrum, les événements Scrum, et le coaching d'équipes Agile."
+    },
+    "ucsdBigData": {
+      "title": "Introduction to Big Data",
+      "issuer": "University of California San Diego",
+      "description": "Introduction aux concepts fondamentaux du Big Data, incluant le calcul distribué, l'analyse de données, les systèmes de fichiers, Apache Hadoop, et l'infrastructure de données."
+    },
+    "metaReactNative": {
+      "title": "React Native",
+      "issuer": "Meta",
+      "description": "Formation sur le développement d'applications mobiles avec React Native, incluant l'environnement de développement, les composants UI, le développement cross-platform, et les outils de développement mobile."
+    },
+    "metaReact": {
+      "title": "React Basics",
+      "issuer": "Meta",
+      "description": "Formation sur les fondamentaux de React, incluant les composants réutilisables, le dataflow, la gestion des props, le développement d'applications React, et la programmation événementielle."
+    },
+    "michiganNegotiation": {
+      "title": "Successful Negotiation: Essential Strategies and Skills",
+      "issuer": "University of Michigan",
+      "description": "Formation sur les stratégies et compétences essentielles de négociation, incluant l'analyse de négociation, les outils psychologiques, la communication interculturelle, et la pratique de négociations."
+    },
+    "michiganJavascript": {
+      "title": "Interactivity with JavaScript",
+      "issuer": "University of Michigan",
+      "description": "Formation sur l'interactivité avec JavaScript, incluant la réaction aux événements utilisateur, l'écriture de code JavaScript pour l'interaction, les directives d'accessibilité, et le débogage."
+    },
+    "coloradoPresentation": {
+      "title": "Successful Presentation",
+      "issuer": "University of Colorado Boulder",
+      "description": "Formation sur les compétences de présentation publique, incluant la présence exécutive, la communication verbale, les stratégies de communication, le storytelling, et l'expression orale."
+    }
   },
   "contact": {
     "title": "Construisons quelque chose ensemble.",

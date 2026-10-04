@@ -31,7 +31,8 @@ export default function Certifications() {
             {certifications.map((cert) => {
               const isExpanded = expandedSkills[cert.id]
               const showAllSkills = isExpanded || cert.skills.length <= 6
-              
+              const certKey = cert.id.replace(/-/g, '').toLowerCase()
+
               return (
                 <article key={cert.id} className="certification-card">
                   <div className="certification-card__header">
@@ -39,18 +40,13 @@ export default function Certifications() {
                       <FiAward aria-hidden="true" />
                     </div>
                     <div className="certification-card__meta">
-                      <span className="certification-card__date">{cert.date}</span>
-                      {cert.issuer && (
-                        <span className="certification-card__issuer">{cert.issuer}</span>
-                      )}
+                      <h3 className="certification-card__title">{t(`certifications.${certKey}.title`, { defaultValue: cert.title })}</h3>
+                      <p className="certification-card__issuer">{cert.issuer}</p>
+                      <p className="certification-card__date">{cert.date}</p>
                     </div>
                   </div>
 
-                  <h3 className="certification-card__title">{cert.title}</h3>
-
-                  {cert.description && (
-                    <p className="certification-card__description">{cert.description}</p>
-                  )}
+                  <p className="certification-card__description">{t(`certifications.${certKey}.description`, { defaultValue: cert.description })}</p>
 
                   {cert.skills && cert.skills.length > 0 && (
                     <div className="certification-card__skills">

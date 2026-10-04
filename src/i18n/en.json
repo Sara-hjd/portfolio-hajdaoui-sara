@@ -24,15 +24,89 @@
   "about": {
     "title": "About",
     "languages": "Languages",
-    "interests": "Interests"
+    "interests": "Interests",
+    "bio": [
+      "My journey in computer science has progressively led me to explore different aspects of development and digital technologies. After a third year mainly focused on development, during which I had the opportunity to work on several projects, I discovered in my fourth year another aspect of computer science through Artificial Intelligence and Data.",
+      "What I particularly like about this field is its diversity: understanding a problem, asking the right questions, researching different approaches, experimenting and building a concrete solution. I am naturally curious and I enjoy learning new technologies by first understanding how they work, then putting them into practice.",
+      "I define myself today as a versatile and adaptable profile, with an interest in development, AI and Data. I also appreciate teamwork, where exchanges allow us to confront ideas and explore different solutions.",
+      "My goal for the future is to progressively move from academic learning to concrete professional problems, through a final year project that will allow me to learn, contribute and put my skills into practice."
+    ]
   },
   "skills": {
-    "title": "Skills"
+    "title": "Skills",
+    "categories": {
+      "programming": "Programming Languages",
+      "web": "Web Development",
+      "backend": "Backend",
+      "databases": "Databases",
+      "data": "Data / AI",
+      "llm": "LLM / GenAI",
+      "tools": "Tools",
+      "modeling": "Modeling & Design",
+      "softSkills": "Soft skills"
+    }
   },
   "experience": {
     "title": "Experience",
     "present": "Present",
-    "empty": "No experience to display at the moment."
+    "empty": "No experience to display at the moment.",
+    "sanlam": {
+      "title": "Internship — Artificial Intelligence",
+      "company": "Sanlam",
+      "shortDescription": "Internship in Artificial Intelligence. Team project with professional supervision.",
+      "missions": [
+        "Automatic document classification (ResNet18, Qwen, Python, PyTorch, OCR)",
+        "Damage detection and analysis (Qwen, OCR, Python, document/image processing)",
+        "Python script development",
+        "Work on AI pipelines",
+        "Data collection and preparation",
+        "Scraping",
+        "Document/image processing",
+        "Integration of different technical components",
+        "Technical documentation"
+      ]
+    },
+    "jobgate": {
+      "title": "Intern - Web Development",
+      "company": "JOBGATE / UM6P StartGate",
+      "location": "Benguerir, Morocco",
+      "shortDescription": "Practical internship on a web platform for video recording and management.",
+      "missions": [
+        "Requirements analysis and solution modeling",
+        "Frontend development with React.js",
+        "Backend development with Django REST",
+        "Implementation of a video editing module with FFmpeg",
+        "Video and metadata management",
+        "Database architecture design",
+        "Agile teamwork"
+      ]
+    },
+    "cbi": {
+      "title": "Intern - Observation",
+      "company": "CBI",
+      "location": "Casablanca, Morocco",
+      "shortDescription": "Observation internship in an IT company.",
+      "missions": [
+        "Discovery of software development processes",
+        "Learning tools and methods used",
+        "Participation in a practical project",
+        "Updating an intranet site (HTML/CSS)",
+        "Introduction to system administration",
+        "IT team work"
+      ]
+    },
+    "intersig": {
+      "title": "Intern - Observation",
+      "company": "INTERSIG",
+      "location": "Casablanca, Morocco",
+      "shortDescription": "Observation internship in an industrial company.",
+      "missions": [
+        "Discovery of manufacturing processes",
+        "Understanding department organization",
+        "Development of an Excel/VBA production tracking tool",
+        "Technical data management"
+      ]
+    }
   },
   "projects": {
     "title": "Projects",
@@ -85,7 +159,25 @@
     "present": "Present",
     "coursesTitle": "Relevant Courses",
     "honorsLabel": "Distinction:",
-    "empty": "No education to display at the moment."
+    "empty": "No education to display at the moment.",
+    "emsi": {
+      "degree": "Computer Engineering Cycle",
+      "field": "Artificial Intelligence & Data",
+      "institution": "Moroccan School of Engineering Sciences (EMSI)",
+      "description": "Computer engineering cycle, specialization in Artificial Intelligence & Data."
+    },
+    "emsiPrep": {
+      "degree": "Preparatory Year",
+      "field": "Engineering Pole — computer and industrial development option",
+      "institution": "Moroccan School of Engineering Sciences (EMSI)",
+      "description": "Preparatory year, Engineering Pole, computer and industrial development option."
+    },
+    "baccalaureat": {
+      "degree": "Scientific Baccalaureate",
+      "field": "Physical Sciences",
+      "institution": "Groupe Scolaire Berrada",
+      "description": "Scientific baccalaureate, Physical Sciences option."
+    }
   },
   "certifications": {
     "title": "Certifications",
@@ -95,7 +187,42 @@
     "verifyLabel": "Verify {title} certification (new window)",
     "certificatePdf": "Certificate PDF",
     "certificateLabel": "Download {title} certificate (new window)",
-    "empty": "No certifications to display at the moment."
+    "empty": "No certifications to display at the moment.",
+    "googleAgile": {
+      "title": "Agile Project Management",
+      "issuer": "Google",
+      "description": "Training on Agile project management approach, including Agile values and principles, Scrum pillars, Scrum events, and Agile team coaching."
+    },
+    "ucsdBigData": {
+      "title": "Introduction to Big Data",
+      "issuer": "University of California San Diego",
+      "description": "Introduction to fundamental Big Data concepts, including distributed computing, data analysis, file systems, Apache Hadoop, and data infrastructure."
+    },
+    "metaReactNative": {
+      "title": "React Native",
+      "issuer": "Meta",
+      "description": "Training on mobile application development with React Native, including development environment, UI components, cross-platform development, and mobile development tools."
+    },
+    "metaReact": {
+      "title": "React Basics",
+      "issuer": "Meta",
+      "description": "Training on React fundamentals, including reusable components, dataflow, props management, React application development, and event-driven programming."
+    },
+    "michiganNegotiation": {
+      "title": "Successful Negotiation: Essential Strategies and Skills",
+      "issuer": "University of Michigan",
+      "description": "Training on essential negotiation strategies and skills, including negotiation analysis, psychological tools, intercultural communication, and negotiation practice."
+    },
+    "michiganJavascript": {
+      "title": "Interactivity with JavaScript",
+      "issuer": "University of Michigan",
+      "description": "Training on interactivity with JavaScript, including responding to user events, writing JavaScript code for interaction, accessibility directives, and debugging."
+    },
+    "coloradoPresentation": {
+      "title": "Successful Presentation",
+      "issuer": "University of Colorado Boulder",
+      "description": "Training on public presentation skills, including executive presence, verbal communication, communication strategies, storytelling, and oral expression."
+    }
   },
   "contact": {
     "title": "Let's build something together.",

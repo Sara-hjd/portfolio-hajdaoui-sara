@@ -17,48 +17,41 @@ export default function Experience() {
         <h2 className="section__title">{t('experience.title')}</h2>
         
         <div className="experience__timeline">
-          {completedExperiences.map((exp) => (
-            <article key={exp.id} className="experience-item">
-              <div className="experience-item__marker">
-                <div className="experience-item__dot" />
-              </div>
-              
-              <div className="experience-item__content">
-                <div className="experience-item__header">
-                  <div>
-                    <h3 className="experience-item__title">{exp.title}</h3>
-                    <p className="experience-item__company">{exp.company}</p>
-                  </div>
-                  <div className="experience-item__meta">
-                    <span className="experience-item__location">{exp.location}</span>
-                    <span className="experience-item__period">
-                      {exp.startDate} — {exp.current ? t('experience.present') : exp.endDate}
-                    </span>
-                  </div>
+          {completedExperiences.map((exp) => {
+            const expKey = exp.id.replace(/-/g, '')
+            return (
+              <article key={exp.id} className="experience-item">
+                <div className="experience-item__marker">
+                  <div className="experience-item__dot" />
                 </div>
 
-                <p className="experience-item__description">{exp.shortDescription}</p>
-
-                {exp.missions && exp.missions.length > 0 && (
-                  <ul className="experience-item__missions">
-                    {exp.missions.map((mission, missionIndex) => (
-                      <li key={missionIndex}>{mission}</li>
-                    ))}
-                  </ul>
-                )}
-
-                {exp.technologies && exp.technologies.length > 0 && (
-                  <div className="experience-item__technologies">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="experience-item__tech">
-                        {tech}
+                <div className="experience-item__content">
+                  <div className="experience-item__header">
+                    <div className="experience-item__info">
+                      <h3 className="experience-item__title">{t(`experience.${expKey}.title`, { defaultValue: exp.title })}</h3>
+                      <p className="experience-item__company">{exp.company}</p>
+                    </div>
+                    <div className="experience-item__meta">
+                      <span className="experience-item__location">{exp.location}</span>
+                      <span className="experience-item__period">
+                        {exp.startDate} — {exp.current ? t('experience.present') : exp.endDate}
                       </span>
-                    ))}
+                    </div>
                   </div>
-                )}
-              </div>
-            </article>
-          ))}
+
+                  <p className="experience-item__description">{t(`experience.${expKey}.shortDescription`, { defaultValue: exp.shortDescription })}</p>
+
+                  {exp.missions && exp.missions.length > 0 && (
+                    <ul className="experience-item__missions">
+                      {t(`experience.${expKey}.missions`, { returnObjects: true, defaultValue: exp.missions }).map((mission, missionIndex) => (
+                        <li key={missionIndex}>{mission}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </article>
+            )
+          })}
         </div>
 
         {completedExperiences.length === 0 && (

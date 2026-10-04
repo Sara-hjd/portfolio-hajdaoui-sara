@@ -23,10 +23,10 @@ export const experiences = [
     title: 'Stage — Intelligence Artificielle',
     company: 'Sanlam',
     location: null,
-    startDate: ' juin 2026',
-    endDate: ' août 2026',
+    startDate: 'juin 2026',
+    endDate: 'août 2026',
     current: false,
-    shortDescription: 'Stage voila  en Intelligence Artificielle. Projet réalisé en équipe, avec encadrement professionnel.',
+    shortDescription: 'Stage voila en Intelligence Artificielle. Projet réalisé en équipe, avec encadrement professionnel.',
     missions: [
       'Classification automatique de documents (ResNet18, Qwen, Python, PyTorch, OCR)',
       'Détection et analyse de dommages (Qwen, OCR, Python, traitement de documents/images)',

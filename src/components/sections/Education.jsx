@@ -14,53 +14,56 @@ export default function Education() {
     <section className="education section section--alt" id="education">
       <div className="container education__container">
         <h2 className="section__title">{t('education.title')}</h2>
-        
+
         <div className="education__timeline">
-          {education.map((edu) => (
-            <article key={edu.id} className="education-item">
-              <div className="education-item__marker">
-                <div className="education-item__dot" />
-              </div>
-              
-              <div className="education-item__content">
-                <div className="education-item__header">
-                  <div>
-                    <h3 className="education-item__degree">{edu.degree}</h3>
-                    <p className="education-item__field">{edu.field}</p>
-                    <p className="education-item__institution">{edu.institution}</p>
-                  </div>
-                  <div className="education-item__meta">
-                    <span className="education-item__location">{edu.location}</span>
-                    <span className="education-item__period">
-                      {edu.startDate} — {edu.current ? t('education.present') : edu.endDate}
-                    </span>
-                  </div>
+          {education.map((edu) => {
+            const eduKey = edu.id.replace(/-/g, '')
+            return (
+              <article key={edu.id} className="education-item">
+                <div className="education-item__marker">
+                  <div className="education-item__dot" />
                 </div>
 
-                <p className="education-item__description">{edu.description}</p>
-
-                {edu.relevantCourses && edu.relevantCourses.length > 0 && (
-                  <div className="education-item__courses">
-                    <h4 className="education-item__courses-title">{t('education.coursesTitle')}</h4>
-                    <div className="education-item__courses-list">
-                      {edu.relevantCourses.map((course, courseIndex) => (
-                        <span key={courseIndex} className="education-item__course">
-                          {course}
-                        </span>
-                      ))}
+                <div className="education-item__content">
+                  <div className="education-item__header">
+                    <div className="education-item__info">
+                      <h3 className="education-item__degree">{t(`education.${eduKey}.degree`, { defaultValue: edu.degree })}</h3>
+                      <p className="education-item__field">{t(`education.${eduKey}.field`, { defaultValue: edu.field })}</p>
+                      <p className="education-item__institution">{t(`education.${eduKey}.institution`, { defaultValue: edu.institution })}</p>
+                    </div>
+                    <div className="education-item__meta">
+                      <span className="education-item__location">{edu.location}</span>
+                      <span className="education-item__period">
+                        {edu.startDate} — {edu.current ? t('education.present') : edu.endDate}
+                      </span>
                     </div>
                   </div>
-                )}
 
-                {edu.honors && (
-                  <p className="education-item__honors">
-                    <span className="education-item__honors-label">{t('education.honorsLabel')}</span>
-                    {edu.honors}
-                  </p>
-                )}
-              </div>
-            </article>
-          ))}
+                  <p className="education-item__description">{t(`education.${eduKey}.description`, { defaultValue: edu.description })}</p>
+
+                  {edu.relevantCourses && edu.relevantCourses.length > 0 && (
+                    <div className="education-item__courses">
+                      <h4 className="education-item__courses-title">{t('education.coursesTitle')}</h4>
+                      <div className="education-item__courses-list">
+                        {edu.relevantCourses.map((course, courseIndex) => (
+                          <span key={courseIndex} className="education-item__course">
+                            {course}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {edu.honors && (
+                    <p className="education-item__honors">
+                      <span className="education-item__honors-label">{t('education.honorsLabel')}</span>
+                      {edu.honors}
+                    </p>
+                  )}
+                </div>
+              </article>
+            )
+          })}
         </div>
 
         {education.length === 0 && (
