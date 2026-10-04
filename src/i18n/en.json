@@ -51,19 +51,16 @@
     "present": "Present",
     "empty": "No experience to display at the moment.",
     "sanlam": {
-      "title": "Internship — Artificial Intelligence",
-      "company": "Sanlam",
-      "shortDescription": "Internship in Artificial Intelligence. Team project with professional supervision.",
+      "title": "AI & Data / Python Development",
+      "company": "Sanlam Maroc",
+      "shortDescription": "Development of an AI system for automatic classification of car insurance documents.",
       "missions": [
-        "Automatic document classification (ResNet18, Qwen, Python, PyTorch, OCR)",
-        "Damage detection and analysis (Qwen, OCR, Python, document/image processing)",
-        "Python script development",
-        "Work on AI pipelines",
-        "Data collection and preparation",
-        "Scraping",
-        "Document/image processing",
-        "Integration of different technical components",
-        "Technical documentation"
+        "Development of an AI system for automatic classification of car insurance documents",
+        "Training and evaluation of a ResNet-18 model with PyTorch on six document categories",
+        "Development of a REST API with FastAPI for model inference",
+        "Integration of Qwen2.5-VL for structured information extraction without intermediate OCR",
+        "Implementation of a data preparation pipeline, image processing and Excel export",
+        "Exploitation of data from an Oracle database and teamwork within the IT team"
       ]
     },
     "jobgate": {
@@ -160,13 +157,13 @@
     "coursesTitle": "Relevant Courses",
     "honorsLabel": "Distinction:",
     "empty": "No education to display at the moment.",
-    "emsi": {
+    "engineeringcurrent": {
       "degree": "Computer Engineering Cycle",
       "field": "Artificial Intelligence & Data",
       "institution": "Moroccan School of Engineering Sciences (EMSI)",
       "description": "Computer engineering cycle, specialization in Artificial Intelligence & Data."
     },
-    "emsiPrep": {
+    "preparatory": {
       "degree": "Preparatory Year",
       "field": "Engineering Pole — computer and industrial development option",
       "institution": "Moroccan School of Engineering Sciences (EMSI)",
@@ -188,37 +185,37 @@
     "certificatePdf": "Certificate PDF",
     "certificateLabel": "Download {title} certificate (new window)",
     "empty": "No certifications to display at the moment.",
-    "googleAgile": {
+    "agileprojectmanagement": {
       "title": "Agile Project Management",
       "issuer": "Google",
       "description": "Training on Agile project management approach, including Agile values and principles, Scrum pillars, Scrum events, and Agile team coaching."
     },
-    "ucsdBigData": {
+    "introductiontobigdata": {
       "title": "Introduction to Big Data",
       "issuer": "University of California San Diego",
       "description": "Introduction to fundamental Big Data concepts, including distributed computing, data analysis, file systems, Apache Hadoop, and data infrastructure."
     },
-    "metaReactNative": {
+    "reactnative": {
       "title": "React Native",
       "issuer": "Meta",
       "description": "Training on mobile application development with React Native, including development environment, UI components, cross-platform development, and mobile development tools."
     },
-    "metaReact": {
+    "reactbasics": {
       "title": "React Basics",
       "issuer": "Meta",
       "description": "Training on React fundamentals, including reusable components, dataflow, props management, React application development, and event-driven programming."
     },
-    "michiganNegotiation": {
+    "successfulnegotiation": {
       "title": "Successful Negotiation: Essential Strategies and Skills",
       "issuer": "University of Michigan",
       "description": "Training on essential negotiation strategies and skills, including negotiation analysis, psychological tools, intercultural communication, and negotiation practice."
     },
-    "michiganJavascript": {
+    "interactivitywithjavascript": {
       "title": "Interactivity with JavaScript",
       "issuer": "University of Michigan",
       "description": "Training on interactivity with JavaScript, including responding to user events, writing JavaScript code for interaction, accessibility directives, and debugging."
     },
-    "coloradoPresentation": {
+    "successfulpresentation": {
       "title": "Successful Presentation",
       "issuer": "University of Colorado Boulder",
       "description": "Training on public presentation skills, including executive presence, verbal communication, communication strategies, storytelling, and oral expression."

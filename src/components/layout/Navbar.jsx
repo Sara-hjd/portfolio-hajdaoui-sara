@@ -4,12 +4,12 @@
  * Navigation principale avec menu responsive et toggle dark/light.
  */
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useMemo, useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '../../hooks/useTheme'
+import { FiGithub, FiMenu, FiX, FiSun, FiMoon, FiChevronDown } from 'react-icons/fi'
 import { personal } from '../../data/personal.js'
-import { FiMenu, FiX, FiMoon, FiSun, FiGithub } from 'react-icons/fi'
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme()
@@ -17,7 +17,9 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false)
   const location = useLocation()
+  const langDropdownRef = useRef(null)
 
   const navItems = useMemo(() => [
     { label: t('nav.about'), href: '#about' },
@@ -78,6 +80,17 @@ export default function Navbar() {
     }
   }, [isMenuOpen])
 
+  // Fermer le dropdown de langue quand on clique ailleurs
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target)) {
+        setIsLangDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
   const scrollToSection = (e, href) => {
     e.preventDefault()
     const element = document.querySelector(href)
@@ -89,7 +102,15 @@ export default function Navbar() {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng)
+    setIsLangDropdownOpen(false)
   }
+
+  const languages = [
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'en', name: 'English', flag: '🇬🇧' },
+  ]
+
+  const currentLang = languages.find(lang => lang.code === i18n.language) || languages[0]
 
   return (
     <header
@@ -123,23 +144,33 @@ export default function Navbar() {
 
         {/* Actions droite (GitHub + Language + Theme Toggle) */}
         <div className="navbar__actions">
-          {/* Language Selector */}
-          <div className="navbar__language-selector">
+          {/* Language Dropdown */}
+          <div className="navbar__language-dropdown" ref={langDropdownRef}>
             <button
-              className={`navbar__lang-btn ${i18n.language === 'fr' ? 'navbar__lang-btn--active' : ''}`}
-              onClick={() => changeLanguage('fr')}
-              aria-label="Français"
+              className="navbar__lang-trigger"
+              onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+              aria-label={t('languageSelector.label')}
+              aria-expanded={isLangDropdownOpen}
             >
-              {t('languageSelector.fr')}
+              <span className="navbar__lang-flag">{currentLang.flag}</span>
+              <span className="navbar__lang-code">{currentLang.code.toUpperCase()}</span>
+              <FiChevronDown className={`navbar__lang-chevron ${isLangDropdownOpen ? 'rotate-180' : ''}`} aria-hidden="true" />
             </button>
-            <span className="navbar__lang-separator">|</span>
-            <button
-              className={`navbar__lang-btn ${i18n.language === 'en' ? 'navbar__lang-btn--active' : ''}`}
-              onClick={() => changeLanguage('en')}
-              aria-label="English"
-            >
-              {t('languageSelector.en')}
-            </button>
+            {isLangDropdownOpen && (
+              <div className="navbar__lang-menu">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    className={`navbar__lang-option ${i18n.language === lang.code ? 'navbar__lang-option--active' : ''}`}
+                    onClick={() => changeLanguage(lang.code)}
+                    aria-label={lang.name}
+                  >
+                    <span className="navbar__lang-option-flag">{lang.flag}</span>
+                    <span className="navbar__lang-option-name">{lang.name}</span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {personal.github && (

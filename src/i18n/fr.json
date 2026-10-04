@@ -51,19 +51,16 @@
     "present": "Présent",
     "empty": "Aucune expérience à afficher pour le moment.",
     "sanlam": {
-      "title": "Stage — Intelligence Artificielle",
-      "company": "Sanlam",
-      "shortDescription": "Stage voila en Intelligence Artificielle. Projet réalisé en équipe, avec encadrement professionnel.",
+      "title": "IA & Data / Développement Python",
+      "company": "Sanlam Maroc",
+      "shortDescription": "Développement d'un système d'IA pour la classification automatique de documents d'assurance automobile.",
       "missions": [
-        "Classification automatique de documents (ResNet18, Qwen, Python, PyTorch, OCR)",
-        "Détection et analyse de dommages (Qwen, OCR, Python, traitement de documents/images)",
-        "Développement de scripts Python",
-        "Travail sur les pipelines IA",
-        "Collecte et préparation de données",
-        "Scraping",
-        "Traitement de documents/images",
-        "Intégration de différents composants techniques",
-        "Documentation technique"
+        "Développement d'un système d'IA pour la classification automatique de documents d'assurance automobile",
+        "Entraînement et évaluation d'un modèle ResNet-18 avec PyTorch sur six catégories de documents",
+        "Développement d'une API REST avec FastAPI pour l'inférence du modèle",
+        "Intégration de Qwen2.5-VL pour l'extraction structurée d'informations sans OCR intermédiaire",
+        "Mise en place d'un pipeline de préparation des données, traitement d'images et export Excel",
+        "Exploitation de données issues d'une base Oracle et travail en binôme au sein de l'équipe IT"
       ]
     },
     "jobgate": {
@@ -160,13 +157,13 @@
     "coursesTitle": "Cours pertinents",
     "honorsLabel": "Distinction :",
     "empty": "Aucune formation à afficher pour le moment.",
-    "emsi": {
+    "engineeringcurrent": {
       "degree": "Cycle d'ingénierie en informatique",
       "field": "Intelligence Artificielle & Data",
       "institution": "École Marocaine des Sciences de l'Ingénieur (EMSI)",
       "description": "Cycle d'ingénierie en informatique, spécialité Intelligence Artificielle & Data."
     },
-    "emsiPrep": {
+    "preparatory": {
       "degree": "Année préparatoire",
       "field": "Pôle Ingénierie — option développement informatique et industriel",
       "institution": "École Marocaine des Sciences de l'Ingénieur (EMSI)",
@@ -188,37 +185,37 @@
     "certificatePdf": "Certificat PDF",
     "certificateLabel": "Télécharger le certificat {title} (nouvelle fenêtre)",
     "empty": "Aucune certification à afficher pour le moment.",
-    "googleAgile": {
+    "agileprojectmanagement": {
       "title": "Agile Project Management",
       "issuer": "Google",
       "description": "Formation sur l'approche Agile de gestion de projet, incluant les valeurs et principes Agile, les piliers de Scrum, les événements Scrum, et le coaching d'équipes Agile."
     },
-    "ucsdBigData": {
+    "introductiontobigdata": {
       "title": "Introduction to Big Data",
       "issuer": "University of California San Diego",
       "description": "Introduction aux concepts fondamentaux du Big Data, incluant le calcul distribué, l'analyse de données, les systèmes de fichiers, Apache Hadoop, et l'infrastructure de données."
     },
-    "metaReactNative": {
+    "reactnative": {
       "title": "React Native",
       "issuer": "Meta",
       "description": "Formation sur le développement d'applications mobiles avec React Native, incluant l'environnement de développement, les composants UI, le développement cross-platform, et les outils de développement mobile."
     },
-    "metaReact": {
+    "reactbasics": {
       "title": "React Basics",
       "issuer": "Meta",
       "description": "Formation sur les fondamentaux de React, incluant les composants réutilisables, le dataflow, la gestion des props, le développement d'applications React, et la programmation événementielle."
     },
-    "michiganNegotiation": {
+    "successfulnegotiation": {
       "title": "Successful Negotiation: Essential Strategies and Skills",
       "issuer": "University of Michigan",
       "description": "Formation sur les stratégies et compétences essentielles de négociation, incluant l'analyse de négociation, les outils psychologiques, la communication interculturelle, et la pratique de négociations."
     },
-    "michiganJavascript": {
+    "interactivitywithjavascript": {
       "title": "Interactivity with JavaScript",
       "issuer": "University of Michigan",
       "description": "Formation sur l'interactivité avec JavaScript, incluant la réaction aux événements utilisateur, l'écriture de code JavaScript pour l'interaction, les directives d'accessibilité, et le débogage."
     },
-    "coloradoPresentation": {
+    "successfulpresentation": {
       "title": "Successful Presentation",
       "issuer": "University of Colorado Boulder",
       "description": "Formation sur les compétences de présentation publique, incluant la présence exécutive, la communication verbale, les stratégies de communication, le storytelling, et l'expression orale."
