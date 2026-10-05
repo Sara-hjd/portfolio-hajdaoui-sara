@@ -23,6 +23,8 @@ i18n
     lng: 'fr',
     interpolation: {
       escapeValue: false,
+      prefix: '{',
+      suffix: '}',
     },
     detection: {
       order: ['localStorage', 'navigator'],
