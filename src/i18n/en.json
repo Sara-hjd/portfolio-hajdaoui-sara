@@ -65,10 +65,9 @@
         "Exploitation of data from an Oracle database and teamwork within the IT team"
       ]
     },
-    "jobgate": {
+    "jobgateum6p": {
       "title": "Intern - Web Development",
       "company": "JOBGATE / UM6P StartGate",
-      "location": "Benguerir, Morocco",
       "shortDescription": "Practical internship on a web platform for video recording and management.",
       "missions": [
         "Requirements analysis and solution modeling",
@@ -80,28 +79,26 @@
         "Agile teamwork"
       ]
     },
-    "cbi": {
+    "cbicasablanca": {
       "title": "Intern - Observation",
       "company": "CBI",
-      "location": "Casablanca, Morocco",
       "shortDescription": "Observation internship in an IT company.",
       "missions": [
         "Discovery of software development processes",
-        "Learning tools and methods used",
+        "Learning of tools and methods used",
         "Participation in a practical project",
-        "Updating an intranet site (HTML/CSS)",
+        "Update of an intranet site (HTML/CSS)",
         "Introduction to system administration",
-        "IT team work"
+        "IT teamwork"
       ]
     },
-    "intersig": {
+    "intersigcasablanca": {
       "title": "Intern - Observation",
       "company": "INTERSIG",
-      "location": "Casablanca, Morocco",
       "shortDescription": "Observation internship in an industrial company.",
       "missions": [
         "Discovery of manufacturing processes",
-        "Understanding department organization",
+        "Understanding of department organization",
         "Development of an Excel/VBA production tracking tool",
         "Technical data management"
       ]

@@ -65,10 +65,9 @@
         "Exploitation de données issues d'une base Oracle et travail en binôme au sein de l'équipe IT"
       ]
     },
-    "jobgate": {
+    "jobgateum6p": {
       "title": "Stagiaire - Développement Web",
       "company": "JOBGATE / UM6P StartGate",
-      "location": "Benguerir, Maroc",
       "shortDescription": "Stage pratique sur une plateforme web d'enregistrement et de gestion de vidéos.",
       "missions": [
         "Analyse des besoins et modélisation de la solution",
@@ -80,24 +79,22 @@
         "Travail en équipe agile"
       ]
     },
-    "cbi": {
+    "cbicasablanca": {
       "title": "Stagiaire - Observation",
       "company": "CBI",
-      "location": "Casablanca, Maroc",
       "shortDescription": "Stage d'observation dans une entreprise informatique.",
       "missions": [
         "Découverte des processus de développement logiciel",
-        "Apprentissage des outils et méthodes Utilisés",
+        "Apprentissage des outils et méthodes utilisés",
         "Participation à un projet pratique",
         "Mise à jour d'un site intranet (HTML/CSS)",
         "Initiation à l'administration système",
         "Travail en équipe IT"
       ]
     },
-    "intersig": {
+    "intersigcasablanca": {
       "title": "Stagiaire - Observation",
       "company": "INTERSIG",
-      "location": "Casablanca, Maroc",
       "shortDescription": "Stage d'observation dans une entreprise industrielle.",
       "missions": [
         "Découverte des processus de fabrication",
