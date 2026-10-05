@@ -15,6 +15,8 @@
     "menuCloseLabel": "Open menu"
   },
   "hero": {
+    "title": "Computer Engineering Student | AI, Machine Learning & Data",
+    "shortBio": "Computer engineering student specializing in Artificial Intelligence & Data at EMSI. I design and develop solutions combining Artificial Intelligence, Machine Learning, frontend and backend development, software development and data processing, with practical experience in scraping, AI pipelines and model integration. I am looking for a final year project for 2027 in the fields of AI, Machine Learning or Data.",
     "viewProjects": "View my projects",
     "contactMe": "Contact me",
     "github": "GitHub",
@@ -116,6 +118,28 @@
     "githubLabel": "GitHub (new window)",
     "demoLabel": "Demo (new window)",
     "empty": "No projects to display at the moment.",
+    "immoai": {
+      "title": "IMMO-AI — Intelligent Real Estate Analysis Platform",
+      "shortDescription": "Real estate analysis platform dedicated to the Moroccan market with multi-agent AI pipeline, semantic search and estimation tools.",
+      "problem": "The Moroccan real estate market lacks centralized tools enabling intelligent property analysis. Information is scattered across multiple platforms (mubawab.ma, avito.ma, etc.), making comparison, reliable price estimation and profitability evaluation difficult for investors and buyers.",
+      "overview": "IMMO-AI is a real estate analysis platform dedicated to the Moroccan market. The project aims to provide intelligent tools for property analysis, price estimation and profitability evaluation, using AI and Machine Learning techniques.",
+      "objective": "Develop a complete platform allowing users to search, analyze and evaluate real estate properties in Morocco thanks to advanced AI tools, including semantic search, automatic price estimation and neighborhood analysis.",
+      "solution": "An integrated web platform combining automated scraping, multi-agent AI pipeline for qualitative analysis, semantic search, price estimation, neighborhood scoring, and interactive interface with Leaflet map to visualize and compare properties.",
+      "myRole": "Designer / Developer with full-stack and AI/Data contribution. Participation in backend (development, API, component integration, frontend/backend exchanges), scraping (system development, real estate data collection, preparation/normalization, integration), AI pipeline (multi-agent pipeline implementation, component integration/orchestration, agent results integration), frontend (React, API integration, interfaces, Leaflet map, exports), and documentation (project report and documentation). Team project.",
+      "teamWork": "Collective development of the IMMO-AI platform with integration of different components (scraping, backend, AI pipeline, frontend). The project was carried out as a team with task distribution according to each member's skills.",
+      "architecture": "Client-server architecture with FastAPI backend and React/Vite frontend. PostgreSQL database for real estate data storage. Multi-agent AI pipeline for data processing and analysis. Data flow follows the scheme: Collection (mubawab.ma scraping) → Preparation/normalization → Storage (PostgreSQL) → Multi-agent AI pipeline → Analysis/scoring/estimation → FastAPI API → React Frontend → Restitution (map, comparator, exports).",
+      "methodology": "Agile approach with iterative development. Automated collection of ads via scraping, processing by multi-agent AI pipeline (5 specialized agents), and React user interface for visualization and interaction.",
+      "pipelineIA": "Multi-agent system composed of 5 specialized agents: Collection agent (raw data retrieval), Normalization agent (format standardization), Qualitative analysis agent (description evaluation), Estimation agent (price calculation), Scoring agent (neighborhood evaluation). Agents communicate via an orchestrated architecture that coordinates their inputs/outputs to produce a consolidated analysis of each property.",
+      "scraping": "Automated scraping system targeting mubawab.ma for real estate ad collection. Using BeautifulSoup4 and httpx for data extraction (price, location, characteristics, description). Collected data is normalized and stored in PostgreSQL for further processing by the AI pipeline.",
+      "semanticSearch": "Semantic search based on Sentence Transformers with the all-MiniLM-L6-v2 model for encoding real estate descriptions into vectors. Using Groq for LLM inference with the llama-3.3-70b-versatile model, enabling natural language queries and contextual responses. The system allows searching for properties by description, intention or complex criteria, beyond simple keyword search.",
+      "backend": "Backend developed with FastAPI and Python 3.11. RESTful API for exposing features (search, estimation, scoring). Using SQLAlchemy for ORM and communication with PostgreSQL. Integration with AI pipeline via asynchronous calls. Frontend request management and orchestration of different components.",
+      "frontend": "Frontend developed with React and Vite. Reactive user interface with API integration for real-time data retrieval. Interactive Leaflet map for geographic visualization of properties. Comparison module to put several ads side by side. Export features (PDF/Excel) for analyses. Integrated chatbot with natural language search.",
+      "features": "Semantic search of ads, automatic price estimation, necessary work evaluation, profitability calculation (rental yield, return), neighborhood scoring (accessibility, services, security), overall property score, interactive map with filtering, multi-ad comparator, PDF/Excel exports, real estate chatbot with natural language search.",
+      "implementation": "Development of an automated real estate ad collection system, implementation of a multi-agent AI pipeline for qualitative analysis, creation of a React interface with interactive Leaflet map, development of PDF/Excel export features, and integration of a real estate chatbot with natural language search.",
+      "results": "Functional platform with semantic search, price estimation, work evaluation, profitability calculation, neighborhood score, overall score, interactive map, comparator and chatbot.",
+      "challenges": "Integration of AI models for qualitative analysis, management of large-scale data collection, synchronization between AI pipeline and user interface.",
+      "improvements": "Adding more data sources, improving estimation models, expanding chatbot features, performance optimization."
+    },
     "modal": {
       "closeLabel": "Close",
       "type": {
@@ -132,6 +156,7 @@
         "solution": "Solution",
         "technologies": "Technologies",
         "myRole": "My Role",
+        "teamWork": "Team Work",
         "architecture": "Architecture",
         "methodology": "Methodology",
         "pipelineIA": "AI Pipeline",

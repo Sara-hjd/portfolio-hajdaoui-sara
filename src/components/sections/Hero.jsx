@@ -13,7 +13,7 @@ export default function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section className="hero section" id="hero">
+    <section className="hero" id="hero">
       <div className="container hero__container">
         <div className="hero__content">
           {personal.photoUrl && (
@@ -21,11 +21,10 @@ export default function Hero() {
               <img src={personal.photoUrl} alt={personal.name} className="hero__photo-img" />
             </div>
           )}
-
           <div className="hero__text">
             <h1 className="hero__title">{personal.name}</h1>
-            <p className="hero__subtitle">{personal.title}</p>
-            <p className="hero__bio">{personal.shortBio}</p>
+            <p className="hero__subtitle">{t('hero.title')}</p>
+            <p className="hero__bio">{t('hero.shortBio')}</p>
 
             <div className="hero__cta">
               <Link to="/" onClick={(e) => {

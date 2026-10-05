@@ -15,6 +15,8 @@
     "menuCloseLabel": "Ouvrir le menu"
   },
   "hero": {
+    "title": "Étudiante ingénieure en informatique | IA, Machine Learning & Data",
+    "shortBio": "Étudiante ingénieure en informatique, spécialisée en Intelligence Artificielle & Data à l'EMSI. Je conçois et développe des solutions combinant Intelligence Artificielle, Machine Learning, développement frontend et backend, développement logiciel et traitement des données, avec une expérience pratique en scraping, pipelines IA et intégration de modèles. Je recherche un projet de fin d'études pour 2027 dans les domaines de l'IA, du Machine Learning ou de la Data.",
     "viewProjects": "Voir mes projets",
     "contactMe": "Me contacter",
     "github": "GitHub",
@@ -116,6 +118,28 @@
     "githubLabel": "GitHub (nouvelle fenêtre)",
     "demoLabel": "Démo (nouvelle fenêtre)",
     "empty": "Aucun projet à afficher pour le moment.",
+    "immoai": {
+      "title": "IMMO-AI — Plateforme d'Analyse Immobilière Intelligente",
+      "shortDescription": "Plateforme d'analyse immobilière dédiée au marché marocain avec pipeline IA multi-agents, recherche sémantique et outils d'estimation.",
+      "problem": "Le marché immobilier marocain manque d'outils centralisés permettant une analyse intelligente des propriétés. Les informations sont dispersées sur plusieurs plateformes (mubawab.ma, avito.ma, etc.), rendant difficile la comparaison, l'estimation fiable des prix et l'évaluation de la rentabilité pour les investisseurs et les acquéreurs.",
+      "overview": "IMMO-AI est une plateforme d'analyse immobilière dédiée au marché marocain. Le projet vise à fournir des outils intelligents pour l'analyse de propriétés, l'estimation de prix et l'évaluation de rentabilité, en utilisant des techniques d'IA et de Machine Learning.",
+      "objective": "Développer une plateforme complète permettant aux utilisateurs de rechercher, analyser et évaluer des biens immobiliers au Maroc grâce à des outils IA avancés, notamment la recherche sémantique, l'estimation automatique de prix et l'analyse de quartier.",
+      "solution": "Une plateforme web intégrée combinant scraping automatisé, pipeline IA multi-agents pour l'analyse qualitative, recherche sémantique, estimation de prix, scoring de quartier, et interface interactive avec carte Leaflet pour visualiser et comparer les propriétés.",
+      "myRole": "Conceptrice / Développeuse avec contribution full-stack et IA/Data. Participation au backend (développement, API, intégration des composants, échanges frontend/backend), au scraping (développement du système, collecte des données immobilières, préparation/normalisation, intégration), au pipeline IA (mise en œuvre du pipeline multi-agents, intégration/orchestration des composants, intégration des résultats des agents), au frontend (React, intégration API, interfaces, carte Leaflet, exports), et à la documentation (rapport et documentation du projet). Projet réalisé en équipe.",
+      "teamWork": "Développement collectif de la plateforme IMMO-AI avec intégration des différents composants (scraping, backend, pipeline IA, frontend). Le projet a été réalisé en équipe avec répartition des tâches selon les compétences de chaque membre.",
+      "architecture": "Architecture client-serveur avec backend FastAPI et frontend React/Vite. Base de données PostgreSQL pour le stockage des données immobilières. Pipeline IA multi-agents pour le traitement et l'analyse des données. Le flux de données suit le schéma : Collecte (scraping mubawab.ma) → Préparation/normalisation → Stockage (PostgreSQL) → Pipeline IA multi-agents → Analyse/scoring/estimation → API FastAPI → Frontend React → Restitution (carte, comparateur, exports).",
+      "methodology": "Approche agile avec développement itératif. Collecte automatisée d'annonces via scraping, traitement par pipeline IA multi-agents (5 agents spécialisés), et interface utilisateur React pour la visualisation et l'interaction.",
+      "pipelineIA": "Système multi-agents composé de 5 agents spécialisés : Agent de collecte (récupération des données brutes), Agent de normalisation (standardisation des formats), Agent d'analyse qualitative (évaluation des descriptions), Agent d'estimation (calcul des prix), Agent de scoring (évaluation des quartiers). Les agents communiquent via une architecture orchestrée qui coordonne leurs entrées/sorties pour produire une analyse consolidée de chaque propriété.",
+      "scraping": "Système de scraping automatisé ciblant mubawab.ma pour la collecte d'annonces immobilières. Utilisation de BeautifulSoup4 et httpx pour l'extraction des données (prix, localisation, caractéristiques, description). Les données collectées sont normalisées et stockées dans PostgreSQL pour traitement ultérieur par le pipeline IA.",
+      "semanticSearch": "Recherche sémantique basée sur Sentence Transformers avec le modèle all-MiniLM-L6-v2 pour l'encodage des descriptions immobilières en vecteurs. Utilisation de Groq pour l'inférence LLM avec le modèle llama-3.3-70b-versatile, permettant des requêtes en langage naturel et des réponses contextuelles. Le système permet de rechercher des propriétés par description, intention ou critères complexes, au-delà de la simple recherche par mots-clés.",
+      "backend": "Backend développé avec FastAPI et Python 3.11. API RESTful pour l'exposition des fonctionnalités (recherche, estimation, scoring). Utilisation de SQLAlchemy pour l'ORM et la communication avec PostgreSQL. Intégration avec le pipeline IA via des appels asynchrones. Gestion des requêtes frontend et orchestration des différents composants.",
+      "frontend": "Frontend développé avec React et Vite. Interface utilisateur réactive avec intégration API pour la récupération des données en temps réel. Carte interactive Leaflet pour la visualisation géographique des propriétés. Module de comparaison pour mettre en côte-à-côte plusieurs annonces. Fonctionnalités d'export (PDF/Excel) pour les analyses. Chatbot intégré avec recherche en langage naturel.",
+      "features": "Recherche sémantique des annonces, estimation automatique des prix, évaluation des travaux nécessaires, calcul de rentabilité (rentabilité locative, rendement), scoring du quartier (accessibilité, services, sécurité), score global de la propriété, carte interactive avec filtrage, comparateur multi-annonces, exports PDF/Excel, chatbot immobilier avec recherche en langage naturel.",
+      "implementation": "Développement d'un système de collecte automatisée d'annonces immobilières, implémentation d'un pipeline IA multi-agents pour l'analyse qualitative, création d'une interface React avec carte Leaflet interactive, développement de fonctionnalités d'export PDF/Excel, et intégration d'un chatbot immobilier avec recherche en langage naturel.",
+      "results": "Plateforme fonctionnelle avec recherche sémantique, estimation de prix, évaluation des travaux, calcul de rentabilité, score du quartier, score global, carte interactive, comparateur et chatbot.",
+      "challenges": "Intégration de modèles IA pour l'analyse qualitative, gestion de la collecte de données à grande échelle, synchronisation entre le pipeline IA et l'interface utilisateur.",
+      "improvements": "Ajout de plus de sources de données, amélioration des modèles d'estimation, expansion des fonctionnalités du chatbot, optimisation des performances."
+    },
     "modal": {
       "closeLabel": "Fermer",
       "type": {
@@ -132,6 +156,7 @@
         "solution": "Solution",
         "technologies": "Technologies",
         "myRole": "Mon Rôle",
+        "teamWork": "Travail d'équipe",
         "architecture": "Architecture",
         "methodology": "Méthodologie",
         "pipelineIA": "Pipeline IA",

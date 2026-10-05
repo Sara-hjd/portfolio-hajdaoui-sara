@@ -11,6 +11,8 @@ export default function ProjectModal({ project, onClose }) {
   const { t } = useTranslation()
   if (!project) return null
 
+  const projectKey = project.id.replace(/-/g, '')
+
   return (
     <div className="project-modal-overlay" onClick={onClose}>
       <div className="project-modal" onClick={(e) => e.stopPropagation()}>
@@ -28,8 +30,8 @@ export default function ProjectModal({ project, onClose }) {
               </span>
               <span className="project-modal__year">{project.year}</span>
             </div>
-            <h2 className="project-modal__title">{project.title}</h2>
-            <p className="project-modal__description">{project.shortDescription}</p>
+            <h2 className="project-modal__title">{t(`projects.${projectKey}.title`, { defaultValue: project.title })}</h2>
+            <p className="project-modal__description">{t(`projects.${projectKey}.shortDescription`, { defaultValue: project.shortDescription })}</p>
 
             {/* Cover Image */}
             {project.coverImage && (
@@ -79,28 +81,28 @@ export default function ProjectModal({ project, onClose }) {
             {project.show.problem && project.problem && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.problem')}</h3>
-                <p className="project-modal__text">{project.problem}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.problem`, { defaultValue: project.problem })}</p>
               </section>
             )}
 
             {project.show.overview && project.overview && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.overview')}</h3>
-                <p className="project-modal__text">{project.overview}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.overview`, { defaultValue: project.overview })}</p>
               </section>
             )}
 
             {project.show.objective && project.objective && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.objective')}</h3>
-                <p className="project-modal__text">{project.objective}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.objective`, { defaultValue: project.objective })}</p>
               </section>
             )}
 
             {project.show.solution && project.solution && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.solution')}</h3>
-                <p className="project-modal__text">{project.solution}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.solution`, { defaultValue: project.solution })}</p>
               </section>
             )}
 
@@ -120,14 +122,21 @@ export default function ProjectModal({ project, onClose }) {
             {project.show.myRole && project.myRole && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.myRole')}</h3>
-                <p className="project-modal__text">{project.myRole}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.myRole`, { defaultValue: project.myRole })}</p>
+              </section>
+            )}
+
+            {project.show.teamWork && project.teamWork && (
+              <section className="project-modal__section">
+                <h3 className="project-modal__section-title">{t('projects.modal.sections.teamWork')}</h3>
+                <p className="project-modal__text">{t(`projects.${projectKey}.teamWork`, { defaultValue: project.teamWork })}</p>
               </section>
             )}
 
             {project.show.architecture && project.architecture && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.architecture')}</h3>
-                <p className="project-modal__text">{project.architecture}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.architecture`, { defaultValue: project.architecture })}</p>
                 {project.architectureDiagram && (
                   <div className="project-modal__diagram">
                     <img 
@@ -143,14 +152,14 @@ export default function ProjectModal({ project, onClose }) {
             {project.show.methodology && project.methodology && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.methodology')}</h3>
-                <p className="project-modal__text">{project.methodology}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.methodology`, { defaultValue: project.methodology })}</p>
               </section>
             )}
 
             {project.show.pipelineIA && project.pipelineIA && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.pipelineIA')}</h3>
-                <p className="project-modal__text">{project.pipelineIA}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.pipelineIA`, { defaultValue: project.pipelineIA })}</p>
                 {project.pipelineDiagram && (
                   <div className="project-modal__diagram">
                     <img 
@@ -166,63 +175,63 @@ export default function ProjectModal({ project, onClose }) {
             {project.show.scraping && project.scraping && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.scraping')}</h3>
-                <p className="project-modal__text">{project.scraping}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.scraping`, { defaultValue: project.scraping })}</p>
               </section>
             )}
 
             {project.show.semanticSearch && project.semanticSearch && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.semanticSearch')}</h3>
-                <p className="project-modal__text">{project.semanticSearch}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.semanticSearch`, { defaultValue: project.semanticSearch })}</p>
               </section>
             )}
 
             {project.show.backend && project.backend && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.backend')}</h3>
-                <p className="project-modal__text">{project.backend}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.backend`, { defaultValue: project.backend })}</p>
               </section>
             )}
 
             {project.show.frontend && project.frontend && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.frontend')}</h3>
-                <p className="project-modal__text">{project.frontend}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.frontend`, { defaultValue: project.frontend })}</p>
               </section>
             )}
 
             {project.show.features && project.features && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.features')}</h3>
-                <p className="project-modal__text">{project.features}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.features`, { defaultValue: project.features })}</p>
               </section>
             )}
 
             {project.show.implementation && project.implementation && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.implementation')}</h3>
-                <p className="project-modal__text">{project.implementation}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.implementation`, { defaultValue: project.implementation })}</p>
               </section>
             )}
 
             {project.show.results && project.results && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.results')}</h3>
-                <p className="project-modal__text">{project.results}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.results`, { defaultValue: project.results })}</p>
               </section>
             )}
 
             {project.show.challenges && project.challenges && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.challenges')}</h3>
-                <p className="project-modal__text">{project.challenges}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.challenges`, { defaultValue: project.challenges })}</p>
               </section>
             )}
 
             {project.show.improvements && project.improvements && (
               <section className="project-modal__section">
                 <h3 className="project-modal__section-title">{t('projects.modal.sections.improvements')}</h3>
-                <p className="project-modal__text">{project.improvements}</p>
+                <p className="project-modal__text">{t(`projects.${projectKey}.improvements`, { defaultValue: project.improvements })}</p>
               </section>
             )}
 

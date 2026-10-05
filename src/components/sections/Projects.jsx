@@ -21,75 +21,75 @@ export default function Projects() {
         <h2 className="section__title">{t('projects.title')}</h2>
 
         <div className="projects__grid">
-          {projects.map((project) => (
-            <article key={project.id} className="project-card">
-              <div className="project-card__content">
-                <div className="project-card__header">
-                  <span className="project-card__type">
-                    {project.type === 'academic' ? t('projects.type.academic') :
-                     project.type === 'professional' ? t('projects.type.professional') : t('projects.type.personal')}
-                  </span>
-                  <span className="project-card__year">{project.year}</span>
-                </div>
+          {projects.map((project) => {
+            const projectKey = project.id.replace(/-/g, '')
+            return (
+              <article key={project.id} className="project-card">
+                <div className="project-card__content">
+                  <div className="project-card__header">
+                    <span className="project-card__type">{t(`projects.type.${project.type}`)}</span>
+                    <span className="project-card__year">{project.year}</span>
+                  </div>
 
-                <h3 className="project-card__title">
-                  <button 
-                    className="project-card__title-btn"
-                    onClick={() => setSelectedProject(project)}
-                  >
-                    {project.title}
-                  </button>
-                </h3>
+                  <h3 className="project-card__title">
+                    <button
+                      className="project-card__title-btn"
+                      onClick={() => setSelectedProject(project)}
+                    >
+                      {t(`projects.${projectKey}.title`, { defaultValue: project.title })}
+                    </button>
+                  </h3>
 
-                <p className="project-card__description">
-                  {project.shortDescription}
-                </p>
+                  <p className="project-card__description">
+                    {t(`projects.${projectKey}.shortDescription`, { defaultValue: project.shortDescription })}
+                  </p>
 
-                <div className="project-card__tags">
-                  {project.tags.map((tag, index) => (
-                    <span key={index} className="project-card__tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                  <div className="project-card__tags">
+                    {project.tags.map((tag, index) => (
+                      <span key={index} className="project-card__tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                <div className="project-card__footer">
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="project-card__link"
-                  >
-                    {t('projects.viewProject')}
-                    <FiArrowRight aria-hidden="true" />
-                  </button>
+                  <div className="project-card__footer">
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      className="project-card__link"
+                    >
+                      {t('projects.viewProject')}
+                      <FiArrowRight aria-hidden="true" />
+                    </button>
 
-                  <div className="project-card__actions">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        className="project-card__action"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={t('projects.githubLabel')}
-                      >
-                        <FiGithub aria-hidden="true" />
-                      </a>
-                    )}
-                    {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        className="project-card__action"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={t('projects.demoLabel')}
-                      >
-                        <FiExternalLink aria-hidden="true" />
-                      </a>
-                    )}
+                    <div className="project-card__actions">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          className="project-card__action"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={t('projects.githubLabel')}
+                        >
+                          <FiGithub aria-hidden="true" />
+                        </a>
+                      )}
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          className="project-card__action"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={t('projects.demoLabel')}
+                        >
+                          <FiExternalLink aria-hidden="true" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
 
         {projects.length === 0 && (
