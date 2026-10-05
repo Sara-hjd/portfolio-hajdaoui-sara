@@ -21,7 +21,7 @@
     "contactMe": "Contact me",
     "github": "GitHub",
     "seekingPFE": "Looking for final year project {year}",
-    "pfeNote": "{note}"
+    "pfeNote": "Note: {note}"
   },
   "about": {
     "title": "About",
