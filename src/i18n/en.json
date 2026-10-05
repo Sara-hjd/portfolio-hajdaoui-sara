@@ -20,8 +20,8 @@
     "viewProjects": "View my projects",
     "contactMe": "Contact me",
     "github": "GitHub",
-    "seekingPFE": "Looking for final year project {year}",
-    "pfeNote": "Note: {note}"
+    "seekingPFE": "Looking for final year project {{year}}",
+    "pfeNote": "Note: {{note}}"
   },
   "about": {
     "title": "About",

@@ -20,8 +20,8 @@
     "viewProjects": "Voir mes projets",
     "contactMe": "Me contacter",
     "github": "GitHub",
-    "seekingPFE": "Recherche PFE {year}",
-    "pfeNote": "Note : {note}"
+    "seekingPFE": "Recherche PFE {{year}}",
+    "pfeNote": "Note : {{note}}"
   },
   "about": {
     "title": "À propos",
