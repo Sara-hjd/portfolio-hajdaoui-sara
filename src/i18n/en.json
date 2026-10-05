@@ -52,7 +52,7 @@
     "title": "Experience",
     "present": "Present",
     "empty": "No experience to display at the moment.",
-    "sanlam": {
+    "internshipsanlam": {
       "title": "AI & Data / Python Development",
       "company": "Sanlam Maroc",
       "shortDescription": "Development of an AI system for automatic classification of car insurance documents.",
