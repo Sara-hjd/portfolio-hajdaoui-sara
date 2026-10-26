@@ -17,6 +17,9 @@ import './styles/footer.css'
 import './styles/project-detail.css'
 import './styles/project-modal.css'
 import './styles/not-found.css'
+import './styles/cv-download.css'
+import './styles/cv-modal.css'
+import './styles/project-detail-page.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

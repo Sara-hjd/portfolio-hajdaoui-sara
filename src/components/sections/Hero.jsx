@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 import { FiArrowRight, FiMail, FiGithub } from 'react-icons/fi'
+import CvDownloadButton from '../ui/CvDownloadButton.jsx'
+import CvPreviewButton from '../ui/CvPreviewButton.jsx'
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -26,7 +28,7 @@ export default function Hero() {
             <p className="hero__subtitle">{t('hero.title')}</p>
             <p className="hero__bio">{t('hero.shortBio')}</p>
 
-            <div className="hero__cta">
+            <div className="hero__actions-nav">
               <Link to="/" onClick={(e) => {
                 e.preventDefault()
                 const projectsSection = document.getElementById('projects')
@@ -47,7 +49,7 @@ export default function Hero() {
               {personal.github && (
                 <a
                   href={personal.github}
-                  className="btn btn--ghost"
+                  className="hero__github-link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -55,6 +57,14 @@ export default function Hero() {
                   {t('hero.github')}
                 </a>
               )}
+            </div>
+
+            <div className="hero__actions-cv">
+              <span className="hero__cv-label">{t('cv.label')}</span>
+              <div className="hero__cv-buttons">
+                <CvPreviewButton />
+                <CvDownloadButton />
+              </div>
             </div>
 
             {personal.seekingPFE && (

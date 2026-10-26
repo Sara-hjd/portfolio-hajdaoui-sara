@@ -5,6 +5,7 @@
  */
 
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { getSortedProjects } from '../../data/projects.js'
 import { FiArrowRight, FiGithub, FiExternalLink } from 'react-icons/fi'
@@ -60,6 +61,14 @@ export default function Projects() {
                       {t('projects.viewProject')}
                       <FiArrowRight aria-hidden="true" />
                     </button>
+
+                    <Link
+                      to={`/project-detail/${project.slug}`}
+                      className="project-card__link project-card__link--outline"
+                    >
+                      {t('projects.viewDetail')}
+                      <FiArrowRight aria-hidden="true" />
+                    </Link>
 
                     <div className="project-card__actions">
                       {project.githubUrl && (

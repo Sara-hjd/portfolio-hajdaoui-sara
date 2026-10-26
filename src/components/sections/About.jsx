@@ -14,7 +14,7 @@ export default function About() {
     <section className="about section section--alt" id="about">
       <div className="container about__container">
         <h2 className="section__title">{t('about.title')}</h2>
-        
+
         <div className="about__content">
           <div className="about__bio">
             {t('about.bio', { returnObjects: true }).map((paragraph, index) => (

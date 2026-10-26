@@ -75,7 +75,22 @@
   padding: var(--space-2) var(--space-4);
   background-color: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
   font-size: var(--text-sm);
   color: var(--text-secondary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__cv-buttons {
+    position: static;
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: var(--space-6);
+  }
 }

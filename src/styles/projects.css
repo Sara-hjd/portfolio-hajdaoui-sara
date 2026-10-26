@@ -120,6 +120,7 @@
   padding-top: var(--space-4);
   border-top: 1px solid var(--border-subtle);
   margin-top: auto;
+  gap: var(--space-3);
 }
 
 .project-card__link {
@@ -139,6 +140,24 @@
 
 .project-card__link:hover {
   color: var(--accent-hover);
+}
+
+.project-card__link--outline {
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.project-card__link--outline:hover {
+  color: white;
+  border-color: var(--accent);
+  background-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-card__link svg {

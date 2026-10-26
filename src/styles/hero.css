@@ -59,16 +59,74 @@
 .hero__bio {
   font-size: var(--text-lg);
   color: var(--text-secondary);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
   max-width: 650px;
   line-height: 1.7;
 }
 
-.hero__cta {
+.hero__actions-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.hero__github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.hero__github-link:hover {
+  color: var(--text-primary);
+}
+
+.hero__github-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero__actions-cv {
+  display: flex;
+  align-items: center;
   gap: var(--space-4);
   margin-bottom: var(--space-8);
+}
+
+.hero__cv-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.hero__cv-buttons {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.hero__email {
+  margin-top: var(--space-4);
+}
+
+.hero__email-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.hero__email-link:hover {
+  color: var(--accent-color);
 }
 
 .hero__status {
@@ -79,6 +137,7 @@
   background-color: var(--accent-subtle);
   border: 1px solid var(--accent-border);
   border-radius: var(--radius-md);
+  margin-top: var(--space-8);
   max-width: fit-content;
 }
 
@@ -93,6 +152,40 @@
 .hero__status-text {
   font-size: var(--text-sm);
   color: var(--text-secondary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero__actions-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions-nav .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__github-link {
+    justify-content: center;
+  }
+
+  .hero__actions-cv {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__cv-buttons {
+    flex-direction: column;
+  }
+
+  .hero__cv-buttons .cv-dropdown {
+    width: 100%;
+  }
+
+  .cv-dropdown__trigger {
+    width: 100%;
+  }
 }
 
 /* Buttons */

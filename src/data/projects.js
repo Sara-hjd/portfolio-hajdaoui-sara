@@ -23,6 +23,7 @@ export const projects = [
   {
     // --- Identification ---
     id: 'immo-ai',
+    slug: 'immo-ai',
     title: 'IMMO-AI — Plateforme d\'Analyse Immobilière Intelligente',
     shortDescription: 'Plateforme d\'analyse immobilière dédiée au marché marocain avec pipeline IA multi-agents, recherche sémantique et outils d\'estimation.',
     type: 'academic',
@@ -146,6 +147,7 @@ export const projects = [
   {
     // --- Identification ---
     id: 'medicare-plus',
+    slug: 'medicare-plus',
     title: 'Medicare+ — Plateforme de Gestion Médicale',
     shortDescription: 'Plateforme numérique destinée à améliorer la gestion des informations médicales, la circulation des données, la coordination des soins et l\'accessibilité.',
     type: 'academic',
@@ -236,6 +238,7 @@ export const projects = [
   {
     // --- Identification ---
     id: 'video-studio',
+    slug: 'video-studio',
     title: 'Video Studio — Plateforme de Gestion Vidéo',
     shortDescription: 'Plateforme web d\'enregistrement et de gestion de vidéos avec module d\'édition vidéo.',
     type: 'professional',
@@ -324,6 +327,7 @@ export const projects = [
   {
     // --- Identification ---
     id: 'caregraph-complete',
+    slug: 'caregraph-complete',
     title: 'CareGraph Complete — Workflow Multi-Agents Médical',
     shortDescription: 'Application académique de simulation d\'orientation clinique préliminaire basée sur LangGraph avec multi-agents, API FastAPI, intégration MCP, interface Streamlit et Human-in-the-Loop.',
     type: 'academic',
@@ -441,6 +445,7 @@ export const projects = [
   {
     // --- Identification ---
     id: 'bookingexpress',
+    slug: 'bookingexpress',
     title: 'BookingExpress — Application Mobile de Réservation d\'Hôtels',
     shortDescription: 'Application mobile de réservation d\'hôtels développée avec React Native et Expo, permettant la recherche, l\'exploration et la réservation d\'hébergements.',
     type: 'academic',

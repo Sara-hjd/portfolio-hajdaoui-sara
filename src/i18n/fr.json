@@ -112,6 +112,7 @@
       "personal": "Personnel"
     },
     "viewProject": "Voir le projet",
+    "viewDetail": "Consulter le détail",
     "githubLabel": "GitHub (nouvelle fenêtre)",
     "demoLabel": "Démo (nouvelle fenêtre)",
     "empty": "Aucun projet à afficher pour le moment.",
@@ -341,5 +342,31 @@
     "label": "Langue",
     "fr": "FR",
     "en": "EN"
+  },
+  "cv": {
+    "label": "CV",
+    "previewLabel": "Aperçu CV",
+    "downloadLabel": "Télécharger",
+    "closeLabel": "Fermer"
+  },
+  "projectDetail": {
+    "backToProjects": "Retour aux projets",
+    "team": "Équipe",
+    "stack": "Stack technique",
+    "status": "État",
+    "problem": "Problématique",
+    "contribution": "Ma contribution",
+    "approach": "Approche",
+    "pipeline": "Pipeline",
+    "features": "Fonctionnalités",
+    "results": "Résultats",
+    "limitations": "Limites",
+    "perspectives": "Perspectives",
+    "learnings": "Enseignements",
+    "links": "Liens",
+    "demo": "Démo",
+    "confidentialCode": "Code confidentiel",
+    "previousProject": "Projet précédent",
+    "nextProject": "Projet suivant"
   }
 }

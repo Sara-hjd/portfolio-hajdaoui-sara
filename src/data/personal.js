@@ -42,9 +42,11 @@ export const personal = {
   photoUrl: '/photo-sara.jpeg',
 
   // --- CV ---
-  // Fichier à déposer dans /public/cv.pdf lorsqu'il sera finalisé
+  // Fichiers à déposer dans /public/ lorsqu'ils seront finalisés
   // Mettre à null pour masquer le bouton téléchargement
-  cvPath: null, // '/cv.pdf'
+  cvFrPath: '/CV_Hajdaoui_Sara_Stage_IA_Data.pdf',
+  cvEnPath: '/CV_HAJDAOUI_Sara_EN.pdf',
+  cvPath: null, // '/cv.pdf' (ancien champ, gardé pour compatibilité)
 
   // --- Recherche PFE ---
   // Ne pas afficher comme "Open to Work" générique
