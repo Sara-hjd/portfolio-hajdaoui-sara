@@ -35,6 +35,36 @@
   white-space: nowrap;
 }
 
+.cv-preview-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 48px;
+  min-width: 140px;
+  padding: 0 1.25rem;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cv-preview-button:hover {
+  background-color: var(--interactive-hover-bg);
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+.cv-preview-button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 .cv-dropdown__trigger:hover {
   background-color: var(--interactive-hover-bg);
   border-color: var(--border-hover);

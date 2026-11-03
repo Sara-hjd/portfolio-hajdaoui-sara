@@ -28,7 +28,7 @@ export default function CvPreviewButton() {
   return (
     <>
       <button
-        className="cv-dropdown__trigger"
+        className="cv-preview-button"
         onClick={handlePreview}
         aria-label={t('cv.previewLabel')}
       >
