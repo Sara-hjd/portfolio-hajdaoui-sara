@@ -20,6 +20,9 @@ export default function CvPreviewModal({ isOpen, onClose }) {
   const cvEnPath = personal.cvEnPath
   const currentLang = i18n.language
   const cvPath = currentLang === 'fr' ? cvFrPath : cvEnPath
+  
+  // Utiliser Google Docs Viewer pour afficher le PDF
+  const pdfViewerUrl = cvPath ? `https://docs.google.com/viewer?url=${encodeURIComponent(window.location.origin + cvPath)}&embedded=true` : null
 
   // Détection mobile pour les PDF
   useEffect(() => {
@@ -146,7 +149,7 @@ export default function CvPreviewModal({ isOpen, onClose }) {
         </div>
         <div className="cv-modal__content">
           <iframe
-            src={`${cvPath}#toolbar=0&navpanes=0&scrollbar=0`}
+            src={pdfViewerUrl}
             className="cv-modal__iframe"
             title={t('cv.previewLabel')}
             aria-label={t('cv.previewLabel')}
