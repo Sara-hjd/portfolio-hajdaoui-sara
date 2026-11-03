@@ -8,7 +8,7 @@ import { useState, useMemo, useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '../../hooks/useTheme'
-import { FiGithub, FiMenu, FiX, FiSun, FiMoon, FiChevronDown } from 'react-icons/fi'
+import { FiGithub, FiMenu, FiX, FiSun, FiMoon, FiChevronDown, FiLinkedin } from 'react-icons/fi'
 import { personal } from '../../data/personal.js'
 
 export default function Navbar() {
@@ -183,6 +183,19 @@ export default function Navbar() {
             >
               <FiGithub aria-hidden="true" />
               <span>GitHub</span>
+            </a>
+          )}
+
+          {personal.linkedin && (
+            <a
+              href={personal.linkedin}
+              className="navbar__github-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn (nouvelle fenêtre)"
+            >
+              <FiLinkedin aria-hidden="true" />
+              <span>LinkedIn</span>
             </a>
           )}
           <button

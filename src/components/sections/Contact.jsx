@@ -6,7 +6,7 @@
 
 import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
-import { FiMail, FiGithub } from 'react-icons/fi'
+import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -59,6 +59,18 @@ export default function Contact() {
               >
                 <FiGithub aria-hidden="true" />
                 <span>{t('contact.github')}</span>
+              </a>
+            )}
+
+            {personal.linkedin && (
+              <a
+                href={personal.linkedin}
+                className="contact__link contact__link--secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiLinkedin aria-hidden="true" />
+                <span>LinkedIn</span>
               </a>
             )}
           </div>
