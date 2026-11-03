@@ -34,7 +34,7 @@ export const personal = {
   // --- Contact ---
   email: 'hajdaouisara0@gmail.com',
   github: 'https://github.com/Sara-hjd',
-  linkedin: null, // [À COMPLÉTER — URL LinkedIn]
+  linkedin: 'https://www.linkedin.com/in/sarahajdaoui/',
 
   // --- Photo ---
   // Fichier à déposer dans /public/ lorsqu'il est disponible
