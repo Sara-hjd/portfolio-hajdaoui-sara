@@ -146,7 +146,7 @@ export default function CvPreviewModal({ isOpen, onClose }) {
         </div>
         <div className="cv-modal__content">
           <iframe
-            src={cvPath}
+            src={`${cvPath}#toolbar=0&navpanes=0&scrollbar=0`}
             className="cv-modal__iframe"
             title={t('cv.previewLabel')}
             aria-label={t('cv.previewLabel')}
