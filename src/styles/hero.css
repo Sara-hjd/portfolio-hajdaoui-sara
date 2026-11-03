@@ -97,6 +97,7 @@
   align-items: center;
   gap: var(--space-4);
   margin-bottom: var(--space-8);
+  pointer-events: auto;
 }
 
 .hero__cv-label {
@@ -111,6 +112,9 @@
 .hero__cv-buttons {
   display: flex;
   gap: var(--space-3);
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
 }
 
 .hero__email {
