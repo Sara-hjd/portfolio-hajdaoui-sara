@@ -22,7 +22,6 @@ export default function CvPreviewButton() {
   }
 
   const handlePreview = () => {
-    console.log('Preview button clicked')
     setIsModalOpen(true)
   }
 
