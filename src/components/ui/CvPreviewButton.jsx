@@ -30,7 +30,7 @@ export default function CvPreviewButton() {
       <button
         className="cv-preview-button"
         onClick={handlePreview}
-        aria-label={t('cv.previewLabel')}
+        title={t('cv.previewLabel')}
       >
         <FiEye aria-hidden="true" />
         {t('cv.previewLabel')}
