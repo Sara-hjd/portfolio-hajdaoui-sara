@@ -1,18 +1,15 @@
 /**
  * CvPreviewButton.jsx
  * ------------------
- * Bouton d'aperçu de CV avec action directe pour ouvrir la modale.
+ * Bouton d'aperçu de CV qui ouvre le PDF dans un nouvel onglet.
  */
 
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { personal } from '../../data/personal.js'
 import { FiEye } from 'react-icons/fi'
-import CvPreviewModal from './CvPreviewModal.jsx'
 
 export default function CvPreviewButton() {
-  const { t } = useTranslation()
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const { t, i18n } = useTranslation()
 
   const cvFrPath = personal.cvFrPath
   const cvEnPath = personal.cvEnPath
@@ -22,20 +19,21 @@ export default function CvPreviewButton() {
   }
 
   const handlePreview = () => {
-    setIsModalOpen(true)
+    const currentLang = i18n.language
+    const cvPath = currentLang === 'fr' ? cvFrPath : cvEnPath
+    if (cvPath) {
+      window.open(cvPath, '_blank')
+    }
   }
 
   return (
-    <>
-      <button
-        className="cv-preview-button"
-        onClick={handlePreview}
-        title={t('cv.previewLabel')}
-      >
-        <FiEye aria-hidden="true" />
-        {t('cv.previewLabel')}
-      </button>
-      <CvPreviewModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-    </>
+    <button
+      className="cv-preview-button"
+      onClick={handlePreview}
+      title={t('cv.previewLabel')}
+    >
+      <FiEye aria-hidden="true" />
+      {t('cv.previewLabel')}
+    </button>
   )
 }
